@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- List the components installed on the nodes and their corresponding owner 
+	user DO NOT CHANGE/REMOVE THE COMPONENTS AND THEIR NAMES. Comment out ones 
+	that are not installed. Change the usr, home and config-location as needed. -->
+
+<components>
+	<component name="hive">
+		<user>hadoop</user>
+		<home>/apache/hive/</home>
+		<config-location>/apache/hive/conf/</config-location>
+	</component>
+
+	<component name="mapreduce">
+		<user>hadoop</user>
+		<home>/home/hadoop/</home>
+		<config-location>/apache/hadoop/conf/</config-location>
+	</component>
+
+	<component name="hdfs">
+		<user>hadoop</user>
+		<home>/home/hadoop/</home>
+		<config-location>/apache/hadoop/conf/</config-location>
+	</component>
+	
+	<component name="hbase">
+		<user>hadoop</user>
+		<home>/apache/hbase/</home>
+		<config-location>/apache/hbase/conf/</config-location>
+	</component>
+		<component name="zookeeper">
+		<user>hadoop</user>
+		<home>/home/hadoop/</home>
+		<config-location>/apache/zookeeper/conf/</config-location>
+	</component>
+	
+	<!-- 
+	<component name="pig">
+		<user>pig</user>
+		<home>/usr/lib/pig</home>
+		<config-location>/etc/pig/conf/</config-location>
+	</component>
+
+	<component name="templeton">
+		<user>templeton</user>
+		<home>/usr/lib/templeton</home>
+		<config-location>/etc/templeton/</config-location>
+	</component>
+
+	<component name="oozie">
+		<user>oozie</user>
+		<home>/usr/lib/oozie</home>
+		<config-location>/etc/oozie/conf/</config-location>
+	</component>
+
+	<component name="sqoop">
+		<user>sqoop</user>
+		<home>/usr/lib/sqoop</home>
+		<config-location>/etc/sqoop/conf/</config-location>
+	</component>
+	
+	<component name="hcatalog">
+		<user>hcat</user>
+		<home>/usr/lib/hcatalog</home>
+		<config-location>/etc/hive/conf/</config-location>
+	</component>
+	-->
+</components>
+

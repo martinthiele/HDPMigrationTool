@@ -1,0 +1,17 @@
+## Generic settings
+common.backup.config.files=true
+common.backup.installation.dir=true
+common.prompt.while.running.commands.on.multiple.nodes=false
+
+## HDFS settings
+hdfs.capture.lsr.report=true
+hdfs.capture.fsck.report=true
+hdfs.backup.nn.image=true
+hdfs.backup.snn.image=true
+hdfs.auto.upgrade.enabled=true
+
+
+## HBase settings
+hbase.compact.tables=true
+hbase.backup.data.on.hdfs=false
+hbase.export.data.on.local.fs=false
