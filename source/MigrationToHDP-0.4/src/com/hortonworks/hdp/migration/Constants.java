@@ -75,6 +75,11 @@ public class Constants {
 	/** The Constant MIGRATION_PROPERTY_COMMON_BACKUP_INSTALLATION_DIR. */
 	public static final String MIGRATION_PROPERTY_COMMON_BACKUP_INSTALLATION_DIR = "common.backup.installation.dir";
 
+	/**
+	 * The Constant MIGRATION_PROPERTY_COMMON_PROMPT_DURING_MULTIHOST_EXECUTION.
+	 */
+	public static final String MIGRATION_PROPERTY_COMMON_PROMPT_DURING_MULTIHOST_EXECUTION = "common.prompt.while.running.commands.on.multiple.nodes";
+
 	/** The Constant MIGRATION_PROPERTY_HBASE_BACK_UP_DATA_ON_HDFS. */
 	public static final String MIGRATION_PROPERTY_HBASE_BACK_UP_DATA_ON_HDFS = "hbase.backup.data.on.hdfs";
 
@@ -101,8 +106,6 @@ public class Constants {
 
 	/** The Constant MIGRATION_PROPERTY_HDFS_CAPTURE_LSR_REPORT. */
 	public static final String MIGRATION_PROPERTY_HDFS_CAPTURE_LSR_REPORT = "hdfs.capture.lsr.report";
-	
-	public static final String MIGRATION_PROPERTY_COMMON_PROMPT_DURING_MULTIHOST_EXECUTION = "common.prompt.while.running.commands.on.multiple.nodes" ;
 
 	/** The Constant NODE_TYPE_DASHBOARD_HOST. */
 	public static final String NODE_TYPE_DASHBOARD_HOST = "dashboardhost";

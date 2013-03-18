@@ -70,13 +70,15 @@ public class PreUpgradeProcessor extends UpgradeProcessor {
 				if (component != null) {
 					if (Constants.COMPONENT_MAP_REDUCE.equalsIgnoreCase(component.getName())) {
 						while (!SSHUtils
-								.confirmAction("We are about to stop the MapReduce. Please finish all your MapReduce activities, if any, such as distcp etc that you want to perform before upgrade. Are you ready to stop MapReduce ?"))
+								.confirmAction("We are about to stop the MapReduce. Please finish all your MapReduce activities, if any, such as distcp etc that you want to perform before upgrade. Are you ready to stop MapReduce ?")) {
 							;
+						}
 					}
 					if (Constants.COMPONENT_HDFS.equalsIgnoreCase(component.getName())) {
 						while (!SSHUtils
-								.confirmAction("We are about to stop the HDFS. Please finish all your back up activities, if any, that you want to perform before upgrade. Are you ready to stop HDFS ?"))
+								.confirmAction("We are about to stop the HDFS. Please finish all your back up activities, if any, that you want to perform before upgrade. Are you ready to stop HDFS ?")) {
 							;
+						}
 					}
 					component.performPreUpgradeActivities();
 				}

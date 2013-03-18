@@ -174,8 +174,8 @@ public class XMLUtil {
 
 		Element existingProperty = null;
 		for (Element newProperty : newProperties) {
-			if (propertiesToExclude != null && propertiesToExclude.contains(newProperty.getChild("name").getValue()) || propertiesToMerge != null
-					&& !propertiesToMerge.contains(newProperty.getChild("name").getValue())) {
+			if (propertiesToExclude != null && propertiesToExclude.contains(newProperty.getChild("name").getValue()) || ( propertiesToMerge != null && propertiesToMerge.size() > 0
+					&& !propertiesToMerge.contains(newProperty.getChild("name").getValue()))) {
 				continue;
 			}
 			existingProperty = getPropertyElementByPropertyName(mergedRootElement, newProperty.getChild("name").getValue());

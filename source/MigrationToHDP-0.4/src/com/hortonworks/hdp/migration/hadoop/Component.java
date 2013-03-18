@@ -353,6 +353,8 @@ public abstract class Component {
 		log.info("Performing post-upgrade activities for " + getName());
 		pullConfigurationsFromAllHosts(Constants.UPGRADE_STAGE_POST);
 		String configType = CONFIG_TYPE_POST_UPGRADE;
+		String configLocation = Config.getLocalServiceConfigDir(Constants.UPGRADE_STAGE_PRE, getName());
+
 		if (StringUtils.equalsIgnoreCase(System.getProperty(Constants.MIGRATION_PROPERTY_COMMON_BACKUP_CONFIG_FILES, Boolean.TRUE.toString()),
 				Boolean.TRUE.toString())) {
 
@@ -360,7 +362,6 @@ public abstract class Component {
 					+ CONFIG_TYPE_POST_UPGRADE + "=post-upgrade, " + CONFIG_TYPE_MERGED + "=merged, " + CONFIG_TYPE_OTHER + "=other", new String[] {
 					CONFIG_TYPE_PRE_UPGRADE, CONFIG_TYPE_POST_UPGRADE, CONFIG_TYPE_MERGED, CONFIG_TYPE_OTHER }, false, CONFIG_TYPE_MERGED);
 
-			String configLocation = Config.getLocalServiceConfigDir(Constants.UPGRADE_STAGE_PRE, getName());
 
 			if (StringUtils.equalsIgnoreCase(CONFIG_TYPE_PRE_UPGRADE, configType)) {
 				configLocation = Config.getLocalServiceConfigDir(Constants.UPGRADE_STAGE_PRE, getName());

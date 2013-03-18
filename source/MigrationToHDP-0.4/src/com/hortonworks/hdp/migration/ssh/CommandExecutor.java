@@ -85,12 +85,10 @@ public class CommandExecutor {
 					// ignore
 				}
 			}
-			try
-			{
-			printResults(allResults.subList(currentHostNumber - currentBatchSize, currentHostNumber));
-			}
-			catch (Exception e){
-				//Ignore exception 
+			try {
+				printResults(allResults.subList(currentHostNumber - currentBatchSize, currentHostNumber));
+			} catch (Exception e) {
+				// Ignore exception
 			}
 			log.debug("Executed batch # " + (iterationNumber + 1) + " with " + currentBatchSize + " host(s) " + hostsInAction);
 
@@ -103,11 +101,14 @@ public class CommandExecutor {
 				nextBatchSize = hostsList.size() - currentHostNumber;
 			}
 
-			while (nextBatchSize > 0 && StringUtils.equalsIgnoreCase(System.getProperty(Constants.MIGRATION_PROPERTY_COMMON_PROMPT_DURING_MULTIHOST_EXECUTION, Boolean.FALSE.toString()), Boolean.TRUE.toString())
+			while (nextBatchSize > 0
+					&& StringUtils.equalsIgnoreCase(
+							System.getProperty(Constants.MIGRATION_PROPERTY_COMMON_PROMPT_DURING_MULTIHOST_EXECUTION, Boolean.FALSE.toString()),
+							Boolean.TRUE.toString())
 					&& !SSHUtils.confirmAction("Executed " + command.getClass().getSimpleName() + " command : " + command.getPrintableCommand() + " on "
 							+ hostsInAction.size() + " host(s) " + hostsInAction
 							+ ". Have you verified the results and do you want to continue with next batch of " + nextBatchSize + " host(s)?")) {
-				//Keep asking the question
+				// Keep asking the question
 			}
 
 		}
@@ -385,6 +386,33 @@ public class CommandExecutor {
 		} else {
 			return null;
 		}
+
+	}
+
+	/**
+	 * The main method.
+	 * 
+	 * @param args
+	 *            the arguments
+	 * @throws Exception
+	 *             the exception
+	 */
+	public static void main(String[] args) throws Exception {
+		if (args == null || args.length < 2) {
+			System.out.println("Usage: " + CommandExecutor.class.getName()
+					+ " <path of file with the host names> <command to be executed on all hosts> [run as userid :optional]");
+			System.exit(1);
+		}
+		List<String> hostsList = ServiceUtils.readHostNamesFromFile(args[0]);
+		User runAsUser = null;
+		User adminUser = null;
+		if (args.length >= 3 && StringUtils.isNotBlank(args[2])) {
+			runAsUser = new User(args[2], null, null);
+		}
+		adminUser = SSHUtils.readUserIdPassword("Please enter user id to be used to login to remote hosts", "root");
+		List<ExecutionResult> results = executeRemoteCommand(hostsList, adminUser, args[1], runAsUser);
+
+		printResults(results);
 
 	}
 
@@ -735,25 +763,6 @@ public class CommandExecutor {
 		} else {
 			return null;
 		}
-
-	}
-
-	public static void main(String[] args) throws Exception {
-		if (args == null || args.length < 2) {
-			System.out.println("Usage: " + CommandExecutor.class.getName()
-					+ " <path of file with the host names> <command to be executed on all hosts> [run as userid :optional]");
-			System.exit(1);
-		}
-		List<String> hostsList = ServiceUtils.readHostNamesFromFile(args[0]);
-		User runAsUser = null;
-		User adminUser = null;
-		if (args.length >= 3 && StringUtils.isNotBlank(args[2])) {
-			runAsUser = new User(args[2], null, null);
-		}
-		adminUser = SSHUtils.readUserIdPassword("Please enter user id to be used to login to remote hosts", "root");
-		List<ExecutionResult> results = executeRemoteCommand(hostsList, adminUser, args[1], runAsUser);
-
-		printResults(results);
 
 	}
 }

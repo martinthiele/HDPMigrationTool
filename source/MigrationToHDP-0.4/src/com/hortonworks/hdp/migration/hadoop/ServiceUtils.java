@@ -108,7 +108,7 @@ public class ServiceUtils {
 		List<String> lines = new ArrayList<String>();
 
 		for (String fileName : filePaths) {
-			log.debug("Reading file " + fileName ) ;
+			log.debug("Reading file " + fileName);
 			try {
 				File f = new File(fileName);
 				if (f.exists()) {

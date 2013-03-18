@@ -15,8 +15,6 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.hortonworks.hdp.migration.hadoop.Component;
 import com.hortonworks.hdp.migration.hadoop.ComponentFactory;
-import com.hortonworks.hdp.migration.hadoop.Service;
-import com.hortonworks.hdp.migration.ssh.CommandExecutor;
 import com.hortonworks.hdp.migration.ssh.ExecutionResult;
 import com.hortonworks.hdp.migration.ssh.SSHUtils;
 import com.hortonworks.hdp.migration.util.Logger;
@@ -245,33 +243,40 @@ public class UpgradeProcessor {
 		askForAdminIdPassword();
 		installedComponents = ComponentFactory.createComponents(upgradeStage, distro, installationType, adminUser);
 		List<ExecutionResult> resultsList = new ArrayList<ExecutionResult>();
-		
+
 		/*
-		if (cleanup) {
-			log.info("Checking all the hosts and cleaning up old upgrade data.");
-
-			for (Component component : installedComponents) {
-				for (Service service : component.getServiceList()) {
-
-					resultsList.addAll(CommandExecutor.executeRemoteCommand(service.getHostsList(), adminUser,
-							" rm -rf " + Config.getRemoteDataDir(upgradeStage, component.getName()).replaceAll(Constants.HOST_NAME_PLACEHOLDER, "*"), null));
-					resultsList.addAll(CommandExecutor.executeRemoteCommand(service.getHostsList(), adminUser,
-							" rm -rf " + Config.getRemoteServiceConfigDir(upgradeStage, component.getName()).replaceAll(Constants.HOST_NAME_PLACEHOLDER, "*"),
-							null));
-					resultsList.addAll(CommandExecutor.executeRemoteCommand(service.getHostsList(), adminUser,
-							" rm -rf " + Config.getRemoteStatsDir(upgradeStage, component.getName(), null), null));
-				}
-				CommandExecutor.executeLocalCommand(
-						" rm -rf " + Config.getLocalDataDir(upgradeStage, component.getName()).replaceAll(Constants.HOST_NAME_PLACEHOLDER, "*"), null,
-						(String) null);
-				CommandExecutor.executeLocalCommand(
-						" rm -rf " + Config.getLocalServiceConfigDir(upgradeStage, component.getName()).replaceAll(Constants.HOST_NAME_PLACEHOLDER, "*"), null,
-						(String) null);
-				CommandExecutor.executeLocalCommand(" rm -rf " + Config.getLocalStatsDir(upgradeStage, component.getName(), null), null, (String) null);
-
-			}
-		}
-*/
+		 * if (cleanup) {
+		 * log.info("Checking all the hosts and cleaning up old upgrade data.");
+		 * 
+		 * for (Component component : installedComponents) { for (Service
+		 * service : component.getServiceList()) {
+		 * 
+		 * resultsList.addAll(CommandExecutor.executeRemoteCommand(service.
+		 * getHostsList(), adminUser, " rm -rf " +
+		 * Config.getRemoteDataDir(upgradeStage,
+		 * component.getName()).replaceAll(Constants.HOST_NAME_PLACEHOLDER,
+		 * "*"), null));
+		 * resultsList.addAll(CommandExecutor.executeRemoteCommand(
+		 * service.getHostsList(), adminUser, " rm -rf " +
+		 * Config.getRemoteServiceConfigDir(upgradeStage,
+		 * component.getName()).replaceAll(Constants.HOST_NAME_PLACEHOLDER,
+		 * "*"), null));
+		 * resultsList.addAll(CommandExecutor.executeRemoteCommand(
+		 * service.getHostsList(), adminUser, " rm -rf " +
+		 * Config.getRemoteStatsDir(upgradeStage, component.getName(), null),
+		 * null)); } CommandExecutor.executeLocalCommand( " rm -rf " +
+		 * Config.getLocalDataDir(upgradeStage,
+		 * component.getName()).replaceAll(Constants.HOST_NAME_PLACEHOLDER,
+		 * "*"), null, (String) null); CommandExecutor.executeLocalCommand(
+		 * " rm -rf " + Config.getLocalServiceConfigDir(upgradeStage,
+		 * component.getName()).replaceAll(Constants.HOST_NAME_PLACEHOLDER,
+		 * "*"), null, (String) null);
+		 * CommandExecutor.executeLocalCommand(" rm -rf " +
+		 * Config.getLocalStatsDir(upgradeStage, component.getName(), null),
+		 * null, (String) null);
+		 * 
+		 * } }
+		 */
 		HashSet<String> failedHostsSet = new HashSet<String>();
 		for (ExecutionResult er : resultsList) {
 			if (er != null && er.getExitCode() != 0) {
