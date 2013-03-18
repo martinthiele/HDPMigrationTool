@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+
+<!--
+  This is a sample configuration file for the Fair Scheduler. For details
+  on the options, please refer to the fair scheduler documentation at
+  http://hadoop.apache.org/core/docs/r0.21.0/fair_scheduler.html.
+
+  To create your own configuration, copy this file to conf/fair-scheduler.xml
+  and add the following property in mapred-site.xml to point Hadoop to the
+  file, replacing [HADOOP_HOME] with the path to your installation directory:
+    <property>
+      <name>mapred.fairscheduler.allocation.file</name>
+      <value>[HADOOP_HOME]/conf/fair-scheduler.xml</value>
+    </property>
+
+  Note that all the parameters in the configuration file below are optional,
+  including the parameters inside <pool> and <user> elements. It is only
+  necessary to set the ones you want to differ from the defaults.
+-->
+
+<allocations>
+
+
+  <pool name="hadmf01">
+    <minMaps>27</minMaps>
+    <minReduces>20</minReduces>
+  </pool>
+
+  <pool name="hadaa01">
+    <minMaps>27</minMaps>
+    <minReduces>20</minReduces>
+  </pool>
+
+  <pool name="hadoy01">
+    <minMaps>27</minMaps>
+    <minReduces>20</minReduces>
+  </pool>
+
+  <pool name="hadwh01">
+    <minMaps>27</minMaps>
+    <minReduces>20</minReduces>
+  </pool>
+
+  <pool name="hadrd01">
+    <minMaps>27</minMaps>
+    <minReduces>20</minReduces>
+  </pool>
+
+  <pool name="hadwh02">
+    <minMaps>27</minMaps>
+    <minReduces>20</minReduces>
+  </pool>
+
+  <pool name="hadsh01">
+    <minMaps>27</minMaps>
+    <minReduces>20</minReduces>
+  </pool>
+
+  <pool name="root">
+    <minMaps>27</minMaps>
+    <minReduces>20</minReduces>
+  </pool>
+
+  <pool name="CXV0821">
+    <minMaps>9</minMaps>
+    <minReduces>0</minReduces>
+     <maxMaps>9</maxMaps>
+  </pool>
+  <pool name="cxv0821">
+    <minMaps>9</minMaps>
+    <minReduces>0</minReduces>
+     <maxMaps>9</maxMaps>
+  </pool>
+  <pool name="AXB8022">
+    <minMaps>30</minMaps>
+    <minReduces>30</minReduces>
+     <maxMaps>30</maxMaps>
+  </pool>
+
+  <pool name="JOU45KG">
+    <maxMaps>50</maxMaps>
+  </pool>
+
+ <user name="hadwh01">
+ <maxRunningJobs>10</maxRunningJobs>
+ </user>
+
+ <user name="hadrd01">
+ <maxRunningJobs>10</maxRunningJobs>
+ </user>
+
+ <user name="hadwh02">
+ <maxRunningJobs>10</maxRunningJobs>
+ </user>
+
+ <user name="hadsh01">
+ <maxRunningJobs>10</maxRunningJobs>
+ </user>
+
+ <user name="hadrd01">
+ <maxRunningJobs>10</maxRunningJobs>
+ </user>
+
+ <user name="hadmf01">
+ <maxRunningJobs>10</maxRunningJobs>
+ </user>
+
+ <user name="hadaa01">
+ <maxRunningJobs>10</maxRunningJobs>
+ </user>
+
+ <user name="root">
+ <maxRunningJobs>10</maxRunningJobs>
+ </user>
+
+
+  <!-- Example element for configuring a user -->
+  <user name="user1">
+    <!-- Limit on running jobs for the user across all pools. If more
+      jobs than this are submitted, only the first <maxRunningJobs> will
+      be scheduled at any given time. Defaults to infinity or the
+      userMaxJobsDefault value set below. -->
+    <maxRunningJobs>10</maxRunningJobs>
+  </user>
+
+  <!-- Default running job limit pools where it is not explicitly set. -->
+  <poolMaxJobsDefault>20</poolMaxJobsDefault>
+
+  <!-- Default running job limit users where it is not explicitly set. -->
+  <userMaxJobsDefault>10</userMaxJobsDefault>
+
+  <!-- Default min share preemption timeout for pools where it is not
+    explicitly configured, in seconds. Requires mapred.fairscheduler.preemption
+    to be set to true in your mapred-site.xml. -->
+  <defaultMinSharePreemptionTimeout>600</defaultMinSharePreemptionTimeout>
+
+  <!-- Preemption timeout for jobs below their fair share, in seconds. 
+    If a job is below half its fair share for this amount of time, it
+    is allowed to kill tasks from other jobs to go up to its fair share.
+    Requires mapred.fairscheduler.preemption to be true in mapred-site.xml. -->
+  <fairSharePreemptionTimeout>600</fairSharePreemptionTimeout>
+
+</allocations>

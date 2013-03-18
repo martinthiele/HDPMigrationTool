@@ -1,0 +1,123 @@
+Safe mode is ON
+Configured Capacity: 46540969164800 (42.33 TB)
+Present Capacity: 46540969164800 (42.33 TB)
+DFS Remaining: 39728354137092 (36.13 TB)
+DFS Used: 6812615027708 (6.2 TB)
+DFS Used%: 14.64%
+Under replicated blocks: 0
+Blocks with corrupt replicas: 0
+Missing blocks: 0
+
+-------------------------------------------------
+Datanodes available: 10 (10 total, 0 dead)
+
+Name: 172.20.152.150:50010
+Decommission Status : Normal
+Configured Capacity: 4654096916480 (4.23 TB)
+DFS Used: 679690317824 (633.01 GB)
+Non DFS Used: 0 (0 KB)
+DFS Remaining: 3974406598656(3.61 TB)
+DFS Used%: 14.6%
+DFS Remaining%: 85.4%
+Last contact: Thu Mar 14 11:26:42 EDT 2013
+
+
+Name: 172.20.152.149:50010
+Decommission Status : Normal
+Configured Capacity: 4654096916480 (4.23 TB)
+DFS Used: 690865033216 (643.42 GB)
+Non DFS Used: 0 (0 KB)
+DFS Remaining: 3963231883264(3.6 TB)
+DFS Used%: 14.84%
+DFS Remaining%: 85.16%
+Last contact: Thu Mar 14 11:23:34 EDT 2013
+
+
+Name: 172.20.152.168:50010
+Decommission Status : Normal
+Configured Capacity: 4654096916480 (4.23 TB)
+DFS Used: 686183996001 (639.06 GB)
+Non DFS Used: 0 (0 KB)
+DFS Remaining: 3967912920479(3.61 TB)
+DFS Used%: 14.74%
+DFS Remaining%: 85.26%
+Last contact: Thu Mar 14 11:23:33 EDT 2013
+
+
+Name: 172.20.152.169:50010
+Decommission Status : Normal
+Configured Capacity: 4654096916480 (4.23 TB)
+DFS Used: 696646840320 (648.8 GB)
+Non DFS Used: 0 (0 KB)
+DFS Remaining: 3957450076160(3.6 TB)
+DFS Used%: 14.97%
+DFS Remaining%: 85.03%
+Last contact: Thu Mar 14 11:23:34 EDT 2013
+
+
+Name: 172.20.152.148:50010
+Decommission Status : Normal
+Configured Capacity: 4654096916480 (4.23 TB)
+DFS Used: 710067484386 (661.3 GB)
+Non DFS Used: 0 (0 KB)
+DFS Remaining: 3944029432094(3.59 TB)
+DFS Used%: 15.26%
+DFS Remaining%: 84.74%
+Last contact: Thu Mar 14 11:23:35 EDT 2013
+
+
+Name: 172.20.152.172:50010
+Decommission Status : Normal
+Configured Capacity: 4654096916480 (4.23 TB)
+DFS Used: 682403170742 (635.54 GB)
+Non DFS Used: 0 (0 KB)
+DFS Remaining: 3971693745738(3.61 TB)
+DFS Used%: 14.66%
+DFS Remaining%: 85.34%
+Last contact: Thu Mar 14 11:23:25 EDT 2013
+
+
+Name: 172.20.152.147:50010
+Decommission Status : Normal
+Configured Capacity: 4654096916480 (4.23 TB)
+DFS Used: 594512191488 (553.68 GB)
+Non DFS Used: 0 (0 KB)
+DFS Remaining: 4059584724992(3.69 TB)
+DFS Used%: 12.77%
+DFS Remaining%: 87.23%
+Last contact: Thu Mar 14 11:23:33 EDT 2013
+
+
+Name: 172.20.152.171:50010
+Decommission Status : Normal
+Configured Capacity: 4654096916480 (4.23 TB)
+DFS Used: 682526044160 (635.65 GB)
+Non DFS Used: 0 (0 KB)
+DFS Remaining: 3971570872320(3.61 TB)
+DFS Used%: 14.67%
+DFS Remaining%: 85.33%
+Last contact: Thu Mar 14 11:26:41 EDT 2013
+
+
+Name: 172.20.152.170:50010
+Decommission Status : Normal
+Configured Capacity: 4654096916480 (4.23 TB)
+DFS Used: 695759380739 (647.98 GB)
+Non DFS Used: 0 (0 KB)
+DFS Remaining: 3958337535741(3.6 TB)
+DFS Used%: 14.95%
+DFS Remaining%: 85.05%
+Last contact: Thu Mar 14 11:23:32 EDT 2013
+
+
+Name: 172.20.152.167:50010
+Decommission Status : Normal
+Configured Capacity: 4654096916480 (4.23 TB)
+DFS Used: 693960568832 (646.3 GB)
+Non DFS Used: 0 (0 KB)
+DFS Remaining: 3960136347648(3.6 TB)
+DFS Used%: 14.91%
+DFS Remaining%: 85.09%
+Last contact: Thu Mar 14 11:23:33 EDT 2013
+
+

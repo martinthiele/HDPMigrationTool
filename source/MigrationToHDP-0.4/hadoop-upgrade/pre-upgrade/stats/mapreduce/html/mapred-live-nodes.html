@@ -4,35 +4,103 @@
 
 
 <html>
-
-<title>singlenode Hadoop Machine List</title>
-
+<head>
+<title>hadmad02 Hadoop Machine List</title>
+<link rel="stylesheet" type="text/css" href="/static/hadoop.css">
+<link rel="icon" type="image/vnd.microsoft.icon" href="/static/images/favicon.ico" />
+</head>
 <body>
-<h1><a href="jobtracker.jsp">singlenode</a> Hadoop Machine List</h1>
+<h1><a href="jobtracker.jsp">hadmad02</a> Hadoop Machine List</h1>
 
 <h2>Active Task Trackers</h2>
 <center>
-<table border="2" cellpadding="5" cellspacing="2">
-<tr><td align="center" colspan="15"><b>Task Trackers</b></td></tr>
-<tr><td><b>Name</b></td><td><b>Host</b></td><td><b># running tasks</b></td><td><b>Max Map Tasks</b></td><td><b>Max Reduce Tasks</b></td><td><b>Failures</b></td><td><b>Node Health Status</b></td><td><b>Seconds Since Node Last Healthy</b></td><td><b>Total Tasks Since Start</b></td>
-<td><b>Succeeded Tasks Since Start</b></td>
-<td><b>Total Tasks Last Day</b></td>
-<td><b>Succeeded Tasks Last Day</b></td>
-<td><b>Total Tasks Last Hour</b></td>
-<td><b>Succeeded Tasks Last Hour</b></td>
-<td><b>Seconds since heartbeat</b></td></tr>
-<tr><td><a href="http://singlenode:50060/">tracker_singlenode:localhost/127.0.0.1:38829</a></td><td>singlenode</td><td>0</td><td>2</td><td>2</td><td>0</td><td>Healthy</td><td>58</td><td>0
-</td><td>0
-</td><td>0
-</td><td>0
+<table class="datatable">
+<thead>
+<tr><th align="center" colspan="15"><b>Task Trackers</b></th></tr>
+<tr><th><b>Name</b></th><th><b>Host</b></th><th><b># running tasks</b></th><th><b>Max Map Tasks</b></th><th><b>Max Reduce Tasks</b></th><th><b>Task Failures</b></th><th><b>Directory Failures</b></th><th><b>Node Health Status</b></th><th><b>Seconds Since Node Last Healthy</b></th><th><b>Total Tasks Since Start</b></th>
+<th><b>Succeeded Tasks Since Start</b></th>
+<th><b>Total Tasks Last Day</b></th>
+<th><b>Succeeded Tasks Last Day</b></th>
+<th><b>Total Tasks Last Hour</b></th>
+<th><b>Succeeded Tasks Last Hour</b></th>
+<th><b>Seconds since heartbeat</b></th></tr>
+</thead><tbody><tr><td><a href="http://hadsad03.homedepot.com:50060/">tracker_hadsad03.homedepot.com:localhost/127.0.0.1:52474</a></td><td>hadsad03.homedepot.com</td><td>0</td><td>12</td><td>9</td><td>5</td><td>0</td><td>N/A</td><td>0</td><td>10317
+</td><td>10255
+</td><td>1317
+</td><td>1299
 </td><td>0
 </td><td>0
 </td><td>0</td></tr>
+<tr><td><a href="http://hadsad06.homedepot.com:50060/">tracker_hadsad06.homedepot.com:localhost/127.0.0.1:42110</a></td><td>hadsad06.homedepot.com</td><td>0</td><td>12</td><td>9</td><td>6</td><td>0</td><td>N/A</td><td>0</td><td>10105
+</td><td>10039
+</td><td>1339
+</td><td>1311
+</td><td>0
+</td><td>0
+</td><td>0</td></tr>
+<tr><td><a href="http://hadsad08.homedepot.com:50060/">tracker_hadsad08.homedepot.com:localhost/127.0.0.1:35792</a></td><td>hadsad08.homedepot.com</td><td>0</td><td>12</td><td>9</td><td>0</td><td>0</td><td>N/A</td><td>0</td><td>9366
+</td><td>9322
+</td><td>1103
+</td><td>1087
+</td><td>0
+</td><td>0
+</td><td>0</td></tr>
+<tr><td><a href="http://hadsad09.homedepot.com:50060/">tracker_hadsad09.homedepot.com:localhost/127.0.0.1:45424</a></td><td>hadsad09.homedepot.com</td><td>0</td><td>12</td><td>9</td><td>1</td><td>0</td><td>N/A</td><td>0</td><td>10222
+</td><td>10163
+</td><td>1414
+</td><td>1382
+</td><td>0
+</td><td>0
+</td><td>0</td></tr>
+<tr><td><a href="http://hadsad11.homedepot.com:50060/">tracker_hadsad11.homedepot.com:localhost/127.0.0.1:39657</a></td><td>hadsad11.homedepot.com</td><td>0</td><td>12</td><td>9</td><td>0</td><td>0</td><td>N/A</td><td>0</td><td>10078
+</td><td>10048
+</td><td>1227
+</td><td>1216
+</td><td>0
+</td><td>0
+</td><td>0</td></tr>
+<tr><td><a href="http://hadsad10.homedepot.com:50060/">tracker_hadsad10.homedepot.com:localhost/127.0.0.1:39305</a></td><td>hadsad10.homedepot.com</td><td>0</td><td>12</td><td>9</td><td>2</td><td>0</td><td>N/A</td><td>0</td><td>9987
+</td><td>9927
+</td><td>1194
+</td><td>1174
+</td><td>0
+</td><td>0
+</td><td>0</td></tr>
+<tr><td><a href="http://hadsad02.homedepot.com:50060/">tracker_hadsad02.homedepot.com:localhost/127.0.0.1:32965</a></td><td>hadsad02.homedepot.com</td><td>0</td><td>12</td><td>9</td><td>0</td><td>0</td><td>N/A</td><td>0</td><td>9675
+</td><td>9633
+</td><td>1169
+</td><td>1149
+</td><td>0
+</td><td>0
+</td><td>0</td></tr>
+<tr><td><a href="http://hadsad04.homedepot.com:50060/">tracker_hadsad04.homedepot.com:localhost/127.0.0.1:39276</a></td><td>hadsad04.homedepot.com</td><td>0</td><td>12</td><td>9</td><td>4</td><td>0</td><td>N/A</td><td>0</td><td>10337
+</td><td>10273
+</td><td>1403
+</td><td>1374
+</td><td>0
+</td><td>0
+</td><td>0</td></tr>
+<tr><td><a href="http://hadsad05.homedepot.com:50060/">tracker_hadsad05.homedepot.com:localhost/127.0.0.1:47073</a></td><td>hadsad05.homedepot.com</td><td>0</td><td>12</td><td>9</td><td>3</td><td>0</td><td>N/A</td><td>0</td><td>10618
+</td><td>10577
+</td><td>1431
+</td><td>1407
+</td><td>0
+</td><td>0
+</td><td>0</td></tr>
+<tr><td><a href="http://hadsad07.homedepot.com:50060/">tracker_hadsad07.homedepot.com:localhost/127.0.0.1:47604</a></td><td>hadsad07.homedepot.com</td><td>0</td><td>12</td><td>9</td><td>8</td><td>0</td><td>N/A</td><td>0</td><td>10079
+</td><td>10004
+</td><td>1389
+</td><td>1358
+</td><td>0
+</td><td>0
+</td><td>0</td></tr>
+</tbody>
 </table>
 </center>
+Highest Failures: tracker_hadsad07.homedepot.com:localhost/127.0.0.1:47604 with 8 failures<br>
 
 
 <hr />
-This is <a href='http://hadoop.apache.org/'>Apache Hadoop</a> release 1.0.3.15
+<a href="http://www.cloudera.com/hadoop/">Cloudera's Distribution including Apache Hadoop</a>, 2013.
 </body></html>
 

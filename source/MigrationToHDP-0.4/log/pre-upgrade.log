@@ -1,0 +1,1796 @@
+00:11:58,473         INFO UpgradeProcessor::validateAndInitialize:225 - ####################################################################################
+00:11:58,484         INFO UpgradeProcessor::validateAndInitialize:226 - ###     BEGINING THE PRE-UPGRADE PROCESS AT Thu Nov 01 00:11:58 PDT 2012     ###
+00:11:58,484         INFO UpgradeProcessor::validateAndInitialize:227 - ####################################################################################
+00:11:58,485        DEBUG SSHUtils::readUserInput:212 - Waiting for user input on 
+
+Please provide user id to be used for ssh into the cluster nodes. This should be a power user who has access to su to all hadoop users
+00:12:12,071        DEBUG SSHUtils::readUserInput:243 - Received user input. Time taken by user is (hh:mm:ss) 00:00:13
+00:12:14,100         INFO UpgradeProcessor::validateAndInitialize:232 - Checking all the hosts and cleaning up old upgrade data.
+00:12:14,117        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hive/*/} on hosts [192.168.56.101]
+00:12:14,123        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:14,489        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hive/*/
+00:12:14,516        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:15,521        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hive/*/
+exitCode=0
+output=
+error=
+00:12:15,521        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/*/conf/} on hosts [192.168.56.101]
+00:12:15,522        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:15,596        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/*/conf/
+00:12:15,598        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:16,599        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/*/conf/
+exitCode=0
+output=
+error=
+00:12:16,600        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hive//} on hosts [192.168.56.101]
+00:12:16,600        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:16,658        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hive//
+00:12:16,660        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:17,664        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hive//
+exitCode=0
+output=
+error=
+00:12:17,664        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/data/hive/*/} on hosts [null]
+00:12:17,665        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:17,679        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/data/hive/*/
+exitCode=0
+output=
+error=
+00:12:17,679        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/service-config/hive/*/conf/} on hosts [null]
+00:12:17,680        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:17,692        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/service-config/hive/*/conf/
+exitCode=0
+output=
+error=
+00:12:17,693        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/stats/hive//} on hosts [null]
+00:12:17,693        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:17,704        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/stats/hive//
+exitCode=0
+output=
+error=
+00:12:17,705        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/} on hosts [192.168.56.101]
+00:12:17,705        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:17,762        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/
+00:12:17,765        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:18,766        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/
+exitCode=0
+output=
+error=
+00:12:18,767        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/} on hosts [192.168.56.101]
+00:12:18,767        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:18,831        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/
+00:12:18,833        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:19,834        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/
+exitCode=0
+output=
+error=
+00:12:19,834        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce//} on hosts [192.168.56.101]
+00:12:19,834        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:19,886        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce//
+00:12:19,889        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:20,892        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce//
+exitCode=0
+output=
+error=
+00:12:20,892        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/} on hosts [192.168.56.101]
+00:12:20,893        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:20,943        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/
+00:12:20,946        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:21,947        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/
+exitCode=0
+output=
+error=
+00:12:21,948        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/} on hosts [192.168.56.101]
+00:12:21,948        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:22,002        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/
+00:12:22,004        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:23,007        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/
+exitCode=0
+output=
+error=
+00:12:23,008        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce//} on hosts [192.168.56.101]
+00:12:23,008        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:23,064        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce//
+00:12:23,067        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:24,068        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce//
+exitCode=0
+output=
+error=
+00:12:24,069        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/} on hosts [192.168.56.101]
+00:12:24,069        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:24,143        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/
+00:12:24,145        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:25,146        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/
+exitCode=0
+output=
+error=
+00:12:25,146        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/} on hosts [192.168.56.101]
+00:12:25,146        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:25,205        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/
+00:12:25,207        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:26,210        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/
+exitCode=0
+output=
+error=
+00:12:26,210        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce//} on hosts [192.168.56.101]
+00:12:26,210        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:26,264        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce//
+00:12:26,267        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:27,270        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce//
+exitCode=0
+output=
+error=
+00:12:27,270        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/} on hosts [null]
+00:12:27,270        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:27,284        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/data/mapreduce/*/
+exitCode=0
+output=
+error=
+00:12:27,285        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/} on hosts [null]
+00:12:27,286        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:27,296        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/*/conf/
+exitCode=0
+output=
+error=
+00:12:27,296        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/stats/mapreduce//} on hosts [null]
+00:12:27,297        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:27,307        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/stats/mapreduce//
+exitCode=0
+output=
+error=
+00:12:27,309        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/*/} on hosts [192.168.56.101]
+00:12:27,309        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:27,362        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/*/
+00:12:27,364        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:28,366        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/*/
+exitCode=0
+output=
+error=
+00:12:28,367        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/} on hosts [192.168.56.101]
+00:12:28,367        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:28,443        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/
+00:12:28,445        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:29,448        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/
+exitCode=0
+output=
+error=
+00:12:29,448        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs//} on hosts [192.168.56.101]
+00:12:29,448        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:29,525        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs//
+00:12:29,527        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:30,528        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs//
+exitCode=0
+output=
+error=
+00:12:30,529        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/*/} on hosts [192.168.56.101]
+00:12:30,529        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:30,647        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/*/
+00:12:30,649        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:31,650        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/*/
+exitCode=0
+output=
+error=
+00:12:31,650        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/} on hosts [192.168.56.101]
+00:12:31,651        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:31,708        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/
+00:12:31,710        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:32,711        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/
+exitCode=0
+output=
+error=
+00:12:32,711        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs//} on hosts [192.168.56.101]
+00:12:32,712        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:32,771        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs//
+00:12:32,773        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:33,774        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs//
+exitCode=0
+output=
+error=
+00:12:33,775        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/*/} on hosts [192.168.56.101]
+00:12:33,775        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:33,830        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/*/
+00:12:33,833        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:34,835        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/*/
+exitCode=0
+output=
+error=
+00:12:34,835        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/} on hosts [192.168.56.101]
+00:12:34,836        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:34,928        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/
+00:12:34,930        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:35,932        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/
+exitCode=0
+output=
+error=
+00:12:35,932        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs//} on hosts [192.168.56.101]
+00:12:35,933        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:36,005        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs//
+00:12:36,007        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:37,008        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs//
+exitCode=0
+output=
+error=
+00:12:37,009        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/data/hdfs/*/} on hosts [null]
+00:12:37,009        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:37,022        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/data/hdfs/*/
+exitCode=0
+output=
+error=
+00:12:37,023        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/} on hosts [null]
+00:12:37,023        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:37,034        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/service-config/hdfs/*/conf/
+exitCode=0
+output=
+error=
+00:12:37,035        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/stats/hdfs//} on hosts [null]
+00:12:37,035        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:37,046        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/stats/hdfs//
+exitCode=0
+output=
+error=
+00:12:37,047        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/*/} on hosts [192.168.56.101]
+00:12:37,047        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:37,101        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/*/
+00:12:37,104        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:38,105        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/*/
+exitCode=0
+output=
+error=
+00:12:38,106        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/*/conf/} on hosts [192.168.56.101]
+00:12:38,106        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:38,158        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/*/conf/
+00:12:38,161        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:39,161        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/*/conf/
+exitCode=0
+output=
+error=
+00:12:39,162        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase//} on hosts [192.168.56.101]
+00:12:39,162        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:39,233        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase//
+00:12:39,235        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:40,237        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase//
+exitCode=0
+output=
+error=
+00:12:40,237        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/*/} on hosts [192.168.56.101]
+00:12:40,238        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:40,289        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/*/
+00:12:40,292        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:41,292        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/*/
+exitCode=0
+output=
+error=
+00:12:41,293        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/*/conf/} on hosts [192.168.56.101]
+00:12:41,293        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:41,362        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/*/conf/
+00:12:41,364        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:42,366        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/*/conf/
+exitCode=0
+output=
+error=
+00:12:42,366        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase//} on hosts [192.168.56.101]
+00:12:42,366        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:42,431        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase//
+00:12:42,433        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:43,434        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase//
+exitCode=0
+output=
+error=
+00:12:43,434        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/data/hbase/*/} on hosts [null]
+00:12:43,435        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:43,450        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/data/hbase/*/
+exitCode=0
+output=
+error=
+00:12:43,451        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/service-config/hbase/*/conf/} on hosts [null]
+00:12:43,451        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:43,464        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/service-config/hbase/*/conf/
+exitCode=0
+output=
+error=
+00:12:43,464        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/stats/hbase//} on hosts [null]
+00:12:43,465        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:43,476        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/stats/hbase//
+exitCode=0
+output=
+error=
+00:12:43,477        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/*/} on hosts [192.168.56.101]
+00:12:43,477        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:43,532        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/*/
+00:12:43,534        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:44,536        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/*/
+exitCode=0
+output=
+error=
+00:12:44,536        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/*/conf/} on hosts [192.168.56.101]
+00:12:44,536        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:44,609        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/*/conf/
+00:12:44,611        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:45,612        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/*/conf/
+exitCode=0
+output=
+error=
+00:12:45,612        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/zookeeper//} on hosts [192.168.56.101]
+00:12:45,612        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:45,688        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/zookeeper//
+00:12:45,690        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:46,692        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  rm -rf /tmp//./hadoop-upgrade/pre-upgrade/stats/zookeeper//
+exitCode=0
+output=
+error=
+00:12:46,692        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/data/zookeeper/*/} on hosts [null]
+00:12:46,693        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:46,708        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/data/zookeeper/*/
+exitCode=0
+output=
+error=
+00:12:46,709        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/*/conf/} on hosts [null]
+00:12:46,709        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:46,721        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/*/conf/
+exitCode=0
+output=
+error=
+00:12:46,722        DEBUG CommandExecutor::executeInParallel:37 - Executing command { rm -rf .//./hadoop-upgrade/pre-upgrade/stats/zookeeper//} on hosts [null]
+00:12:46,722        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:46,734        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command= rm -rf .//./hadoop-upgrade/pre-upgrade/stats/zookeeper//
+exitCode=0
+output=
+error=
+00:12:46,734         INFO Component::performPreUpgradeActivities:339 - Performing pre-upgrade activities for hive
+00:12:46,735         INFO Component::pullConfigurationsFromAllHosts:353 - Pulling down all configurations for hive from all hosts
+00:12:46,738        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:12:46,738        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:46,790        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hive -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf/"
+00:12:46,792        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:47,793        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hive -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf/"
+exitCode=0
+output=
+error=
+00:12:47,794        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/<HOSTNAME>/conf/hive-conf-pre-upgrade.tgz -C /etc/hive/conf// ./} on hosts [192.168.56.101]
+00:12:47,794        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:47,853        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf/hive-conf-pre-upgrade.tgz -C /etc/hive/conf// ./
+00:12:47,856        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:48,857        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf/hive-conf-pre-upgrade.tgz -C /etc/hive/conf// ./
+exitCode=0
+output=
+error=
+00:12:48,857        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/service-config/hive/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:12:48,857        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:48,873        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf/
+exitCode=0
+output=
+error=
+00:12:48,874        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:12:48,874        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:48,874        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf/hive-conf-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf//
+00:12:48,954        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=17522, fileName=hive-conf-pre-upgrade.tgz
+00:12:48,958        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf/hive-conf-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf//
+exitCode=-1
+output=
+error=
+00:12:48,959        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/service-config/hive/<HOSTNAME>/conf/hive-conf-pre-upgrade.tgz -C .//./hadoop-upgrade/pre-upgrade/service-config/hive/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:12:48,959        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:48,978        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf/hive-conf-pre-upgrade.tgz -C .//./hadoop-upgrade/pre-upgrade/service-config/hive/192.168.56.101/conf/
+exitCode=0
+output=
+error=
+00:12:48,978         INFO Component::backupInstallation:127 - Backing up the installation home directory (/usr/lib/hive) for hive from 192.168.56.101
+00:12:48,978        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hive/<HOSTNAME>/} on hosts [192.168.56.101]
+00:12:48,979        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:49,033        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hive -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hive/192.168.56.101/"
+00:12:49,035        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:50,036        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hive -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hive/192.168.56.101/"
+exitCode=0
+output=
+error=
+00:12:50,036        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hive/<HOSTNAME>/hive-installation-pre-upgrade.tgz -C /usr/lib/hive/ ./} on hosts [192.168.56.101]
+00:12:50,037        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:50,090        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hive/192.168.56.101/hive-installation-pre-upgrade.tgz -C /usr/lib/hive/ ./
+00:12:50,092        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:52,094        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hive/192.168.56.101/hive-installation-pre-upgrade.tgz -C /usr/lib/hive/ ./
+exitCode=0
+output=
+error=
+00:12:52,094        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/hive/<HOSTNAME>/} on hosts [192.168.56.101]
+00:12:52,095        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:52,107        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/hive/192.168.56.101/
+exitCode=0
+output=
+error=
+00:12:52,108        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:12:52,108        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:52,108        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/hive/192.168.56.101/hive-installation-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/hive/192.168.56.101//
+00:12:52,201        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=16781943, fileName=hive-installation-pre-upgrade.tgz
+00:12:52,774        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/hive/192.168.56.101/hive-installation-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/hive/192.168.56.101//
+exitCode=0
+output=
+error=
+00:12:52,774         INFO Hive::captureStats:77 - Capturing database and tables information
+00:12:52,775        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/} on hosts [192.168.56.101]
+00:12:52,775        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:52,853        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hive -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/"
+00:12:52,856        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:12:53,857        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hive -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/"
+exitCode=0
+output=
+error=
+00:12:53,857        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hive/bin/hive -e "show databases" | sed "s/ *$//g" |  sed "s/^ *//g" | sort 1> /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/hive-database-list-pre-upgrade.log} on hosts [192.168.56.101]
+00:12:53,857        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:12:53,907        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hive -c 'umask 000; /usr/lib/hive/bin/hive -e "show databases" | sed "s/ *$//g" |  sed "s/^ *//g" | sort 1> /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/hive-database-list-pre-upgrade.log'
+00:12:53,909        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:13:01,916         WARN CommandExecutor::printResults:357 - 
+hostname=192.168.56.101
+command=su -l hive -c 'umask 000; /usr/lib/hive/bin/hive -e "show databases" | sed "s/ *$//g" |  sed "s/^ *//g" | sort 1> /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/hive-database-list-pre-upgrade.log'
+exitCode=0
+output=
+error=WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+Logging initialized using configuration in jar:file:/usr/lib/hive/lib/hive-common-0.9.0.15.jar!/hive-log4j.properties
+Hive history file=/tmp/hive/hive_job_log_hive_201211010012_1559534803.txt
+FAILED: Error in metadata: MetaException(message:Could not connect to meta store using any of the URIs provided)
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask
+00:13:01,916        DEBUG CommandExecutor::executeInParallel:37 - Executing command {for dbname in $(cat /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/hive-database-list-pre-upgrade.log)  ; do /usr/lib/hive/bin/hive -e "use ${dbname} ; show tables ; " | sed "s/ *$//g" |  sed "s/^ *//g" | sort  1> /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/hive-tables-in-${dbname}-pre-upgrade.log; done ; } on hosts [192.168.56.101]
+00:13:01,916        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:13:01,987        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hive -c 'umask 000; for dbname in $(cat /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/hive-database-list-pre-upgrade.log)  ; do /usr/lib/hive/bin/hive -e "use ${dbname} ; show tables ; " | sed "s/ *$//g" |  sed "s/^ *//g" | sort  1> /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/hive-tables-in-${dbname}-pre-upgrade.log; done ; '
+00:13:01,989        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:13:02,990        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hive -c 'umask 000; for dbname in $(cat /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/hive-database-list-pre-upgrade.log)  ; do /usr/lib/hive/bin/hive -e "use ${dbname} ; show tables ; " | sed "s/ *$//g" |  sed "s/^ *//g" | sort  1> /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/hive-tables-in-${dbname}-pre-upgrade.log; done ; '
+exitCode=0
+output=
+error=
+00:13:02,990        DEBUG CommandExecutor::executeInParallel:37 - Executing command {touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/pre-upgrade-hive-schema.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/pre-upgrade-hive-schema.tgz --exclude pre-upgrade-hive-schema.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema// ./} on hosts [192.168.56.101]
+00:13:02,990        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:13:03,046        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hive -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/pre-upgrade-hive-schema.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/pre-upgrade-hive-schema.tgz --exclude pre-upgrade-hive-schema.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema// ./"
+00:13:03,049        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:13:04,050        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hive -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/pre-upgrade-hive-schema.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/pre-upgrade-hive-schema.tgz --exclude pre-upgrade-hive-schema.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema// ./"
+exitCode=0
+output=
+error=
+00:13:04,050        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/hive/schema/} on hosts [192.168.56.101]
+00:13:04,050        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:13:04,065        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/hive/schema/
+exitCode=0
+output=
+error=
+00:13:04,065        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:13:04,066        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:13:04,066        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/pre-upgrade-hive-schema.tgz .//./hadoop-upgrade/pre-upgrade/stats/hive/schema//
+00:13:04,141        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=165, fileName=pre-upgrade-hive-schema.tgz
+00:13:04,143        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/hive/schema/pre-upgrade-hive-schema.tgz .//./hadoop-upgrade/pre-upgrade/stats/hive/schema//
+exitCode=-1
+output=
+error=
+00:13:04,143        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/hive/schema/pre-upgrade-hive-schema.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/hive/schema/} on hosts [192.168.56.101]
+00:13:04,143        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:13:04,158        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/hive/schema/pre-upgrade-hive-schema.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/hive/schema/
+exitCode=0
+output=
+error=
+00:13:04,158         INFO Component::stopSlaves:551 - Stopping all slave services for hive
+00:13:04,159         INFO Component::stopMasters:532 - Stopping all master services for hive
+00:13:04,159        DEBUG Component::stopMasters:536 - hivemetastore service 
+00:13:04,159        DEBUG CommandExecutor::executeInParallel:37 - Executing command {ps aux | awk '{print $1,$2}' | grep hive | awk '{print $2}' | xargs -r kill >/dev/null 2>&1} on hosts [192.168.56.101]
+00:13:04,159        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:13:04,220        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; ps aux | awk '{print $1,$2}' | grep hive | awk '{print $2}' | xargs -r kill >/dev/null 2>&1
+00:13:04,223        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:13:05,224        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; ps aux | awk '{print $1,$2}' | grep hive | awk '{print $2}' | xargs -r kill >/dev/null 2>&1
+exitCode=0
+output=
+error=
+00:13:05,224        DEBUG Component::stopAll:516 - Issued stop command to all hive hosts. Waiting for 01:00 minutes:seconds
+00:14:05,224         INFO Hive::performPreUpgradeActivities:196 - 
+
+*** hive is ready to upgrade. PLEASE BACK UP THE METASTORE DATABASE AND EXECUTE UPGRADE SCRIPTS ***
+
+
+00:14:05,224         INFO Component::performPreUpgradeActivities:339 - Performing pre-upgrade activities for hbase
+00:14:05,224         INFO Component::pullConfigurationsFromAllHosts:353 - Pulling down all configurations for hbase from all hosts
+00:14:05,224        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:14:05,224        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:05,295        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf/"
+00:14:05,297        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:06,298        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf/"
+exitCode=0
+output=
+error=
+00:14:06,298        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/<HOSTNAME>/conf/hbase-conf-pre-upgrade.tgz -C /etc/hbase/conf// ./} on hosts [192.168.56.101]
+00:14:06,298        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:06,356        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf/hbase-conf-pre-upgrade.tgz -C /etc/hbase/conf// ./
+00:14:06,358        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:07,359        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf/hbase-conf-pre-upgrade.tgz -C /etc/hbase/conf// ./
+exitCode=0
+output=
+error=
+00:14:07,359        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/service-config/hbase/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:14:07,360        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:07,374        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf/
+exitCode=0
+output=
+error=
+00:14:07,374        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:14:07,374        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:07,375        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf/hbase-conf-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf//
+00:14:07,484        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=7309, fileName=hbase-conf-pre-upgrade.tgz
+00:14:07,486        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf/hbase-conf-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf//
+exitCode=-1
+output=
+error=
+00:14:07,487        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/service-config/hbase/<HOSTNAME>/conf/hbase-conf-pre-upgrade.tgz -C .//./hadoop-upgrade/pre-upgrade/service-config/hbase/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:14:07,487        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:07,501        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf/hbase-conf-pre-upgrade.tgz -C .//./hadoop-upgrade/pre-upgrade/service-config/hbase/192.168.56.101/conf/
+exitCode=0
+output=
+error=
+00:14:07,502         INFO Component::backupInstallation:127 - Backing up the installation home directory (/usr/lib/hbase) for hbase from 192.168.56.101
+00:14:07,502        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/<HOSTNAME>/} on hosts [192.168.56.101]
+00:14:07,502        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:07,572        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/192.168.56.101/"
+00:14:07,574        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:08,575        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/192.168.56.101/"
+exitCode=0
+output=
+error=
+00:14:08,575        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/<HOSTNAME>/hbase-installation-pre-upgrade.tgz -C /usr/lib/hbase/ ./} on hosts [192.168.56.101]
+00:14:08,575        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:08,630        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/192.168.56.101/hbase-installation-pre-upgrade.tgz -C /usr/lib/hbase/ ./
+00:14:08,632        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:10,635        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hbase/192.168.56.101/hbase-installation-pre-upgrade.tgz -C /usr/lib/hbase/ ./
+exitCode=0
+output=
+error=
+00:14:10,635        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/hbase/<HOSTNAME>/} on hosts [192.168.56.101]
+00:14:10,635        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:10,649        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/hbase/192.168.56.101/
+exitCode=0
+output=
+error=
+00:14:10,649        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:14:10,649        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:10,650        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/hbase/192.168.56.101/hbase-installation-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/hbase/192.168.56.101//
+00:14:10,720        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=33255005, fileName=hbase-installation-pre-upgrade.tgz
+00:14:11,825        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/hbase/192.168.56.101/hbase-installation-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/hbase/192.168.56.101//
+exitCode=0
+output=
+error=
+00:14:11,825         INFO HBase::captureStats:111 - Capturing HBase table list and table definitions
+00:14:11,826        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/} on hosts [192.168.56.101]
+00:14:11,826        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:11,878        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/"
+00:14:11,880        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:12,881        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/"
+exitCode=0
+output=
+error=
+00:14:12,881        DEBUG CommandExecutor::executeInParallel:37 - Executing command {echo -e "list\nexit" >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//listTables.hbase} on hosts [192.168.56.101]
+00:14:12,882        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:12,935        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c 'umask 000; echo -e "list\nexit" >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//listTables.hbase'
+00:14:12,937        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:13,938        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c 'umask 000; echo -e "list\nexit" >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//listTables.hbase'
+exitCode=0
+output=
+error=
+00:14:13,938        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hbase/bin/hbase --config /etc/hbase/conf/ shell /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//listTables.hbase | head -n -2 | tail -n +2 | sed "s/ *$//g" |  sed "s/^ *//g" | sort > /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-list.txt} on hosts [192.168.56.101]
+00:14:13,938        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:13,993        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; /usr/lib/hbase/bin/hbase --config /etc/hbase/conf/ shell /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//listTables.hbase | head -n -2 | tail -n +2 | sed "s/ *$//g" |  sed "s/^ *//g" | sort > /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-list.txt
+00:14:13,994        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:21,000        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; /usr/lib/hbase/bin/hbase --config /etc/hbase/conf/ shell /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//listTables.hbase | head -n -2 | tail -n +2 | sed "s/ *$//g" |  sed "s/^ *//g" | sort > /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-list.txt
+exitCode=0
+output=
+error=
+00:14:21,001        DEBUG CommandExecutor::executeInParallel:37 - Executing command {for table in $(cat /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-list.txt)  ; do echo describe \'$table\' >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//describeTables.hbase; done ;} on hosts [192.168.56.101]
+00:14:21,001        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:21,089        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; for table in $(cat /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-list.txt)  ; do echo describe \'$table\' >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//describeTables.hbase; done ;
+00:14:21,092        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:22,093        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; for table in $(cat /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-list.txt)  ; do echo describe \'$table\' >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//describeTables.hbase; done ;
+exitCode=0
+output=
+error=
+00:14:22,094        DEBUG CommandExecutor::executeInParallel:37 - Executing command {echo exit >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//describeTables.hbase} on hosts [192.168.56.101]
+00:14:22,094        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:22,144        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; echo exit >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//describeTables.hbase"
+00:14:22,147        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:23,148        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; echo exit >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//describeTables.hbase"
+exitCode=0
+output=
+error=
+00:14:23,148        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hbase/bin/hbase --config /etc/hbase/conf/ shell /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//describeTables.hbase > /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-definitions.txt} on hosts [192.168.56.101]
+00:14:23,148        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:23,203        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; /usr/lib/hbase/bin/hbase --config /etc/hbase/conf/ shell /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//describeTables.hbase > /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-definitions.txt"
+00:14:23,205        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:30,209        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; /usr/lib/hbase/bin/hbase --config /etc/hbase/conf/ shell /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//describeTables.hbase > /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-definitions.txt"
+exitCode=0
+output=
+error=
+00:14:30,210        DEBUG CommandExecutor::executeInParallel:37 - Executing command {touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-schema.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-schema.tgz --exclude pre-upgrade-hbase-schema.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema// ./} on hosts [192.168.56.101]
+00:14:30,210        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:30,274        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-schema.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-schema.tgz --exclude pre-upgrade-hbase-schema.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema// ./"
+00:14:30,277        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:31,278        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-schema.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-schema.tgz --exclude pre-upgrade-hbase-schema.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema// ./"
+exitCode=0
+output=
+error=
+00:14:31,279        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/} on hosts [192.168.56.101]
+00:14:31,279        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:31,298        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/
+exitCode=0
+output=
+error=
+00:14:31,298        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:14:31,298        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:31,299        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-schema.tgz .//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//
+00:14:31,372        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=518, fileName=pre-upgrade-hbase-schema.tgz
+00:14:31,374        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-schema.tgz .//./hadoop-upgrade/pre-upgrade/stats/hbase/schema//
+exitCode=-1
+output=
+error=
+00:14:31,374        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-schema.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/} on hosts [null]
+00:14:31,374        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:31,388        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-schema.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/
+exitCode=0
+output=
+error=
+00:14:31,388         INFO HBase::compactTables:162 - Compacting all HBase tables.
+00:14:31,388        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/} on hosts [192.168.56.101]
+00:14:31,389        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:31,441        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/"
+00:14:31,443        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:32,444        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/"
+exitCode=0
+output=
+error=
+00:14:32,444        DEBUG CommandExecutor::executeInParallel:37 - Executing command {for table in $(cat /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-list.txt)  ; do echo major_compact \'$table\' >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//compactTables.hbase; done ; echo -e "major_compact '.META.'\nmajor_compact '-ROOT-'\nexit"  >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//compactTables.hbase} on hosts [192.168.56.101]
+00:14:32,445        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:32,497        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; for table in $(cat /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-list.txt)  ; do echo major_compact \'$table\' >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//compactTables.hbase; done ; echo -e "major_compact '.META.'\nmajor_compact '-ROOT-'\nexit"  >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//compactTables.hbase
+00:14:32,499        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:33,501        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; for table in $(cat /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/schema/pre-upgrade-hbase-tables-list.txt)  ; do echo major_compact \'$table\' >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//compactTables.hbase; done ; echo -e "major_compact '.META.'\nmajor_compact '-ROOT-'\nexit"  >> /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//compactTables.hbase
+exitCode=0
+output=
+error=
+00:14:33,501        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hbase/bin/hbase --config /etc/hbase/conf/ shell /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//compactTables.hbase > /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-hbase-tables-compaction.log} on hosts [192.168.56.101]
+00:14:33,502        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:33,557        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; /usr/lib/hbase/bin/hbase --config /etc/hbase/conf/ shell /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//compactTables.hbase > /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-hbase-tables-compaction.log"
+00:14:33,559        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:40,564        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; /usr/lib/hbase/bin/hbase --config /etc/hbase/conf/ shell /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//compactTables.hbase > /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-hbase-tables-compaction.log"
+exitCode=0
+output=
+error=
+00:14:40,564        DEBUG CommandExecutor::executeInParallel:37 - Executing command {touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-compactionlogs.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-compactionlogs.tgz --exclude pre-upgrade-compactionlogs.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs// ./} on hosts [192.168.56.101]
+00:14:40,564        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:40,618        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-compactionlogs.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-compactionlogs.tgz --exclude pre-upgrade-compactionlogs.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs// ./"
+00:14:40,620        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:41,621        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-compactionlogs.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-compactionlogs.tgz --exclude pre-upgrade-compactionlogs.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs// ./"
+exitCode=0
+output=
+error=
+00:14:41,621        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/} on hosts [192.168.56.101]
+00:14:41,622        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:41,635        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/
+exitCode=0
+output=
+error=
+00:14:41,635        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:14:41,635        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:41,635        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-compactionlogs.tgz .//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//
+00:14:41,711        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=310, fileName=pre-upgrade-compactionlogs.tgz
+00:14:41,712        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-compactionlogs.tgz .//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs//
+exitCode=0
+output=
+error=
+00:14:41,712        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-compactionlogs.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/} on hosts [null]
+00:14:41,713        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:41,725        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/pre-upgrade-compactionlogs.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/hbase/compactionlogs/
+exitCode=0
+output=
+error=
+00:14:41,726         INFO Component::stopSlaves:551 - Stopping all slave services for hbase
+00:14:41,726         INFO Component::stopMasters:532 - Stopping all master services for hbase
+00:14:41,726        DEBUG Component::stopMasters:536 - hbasemaster service 
+00:14:41,726        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hbase/bin/hbase-daemon.sh --config /etc/hbase/conf/ stop master} on hosts [192.168.56.101]
+00:14:41,727        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:41,777        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; /usr/lib/hbase/bin/hbase-daemon.sh --config /etc/hbase/conf/ stop master"
+00:14:41,780        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:43,783        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; /usr/lib/hbase/bin/hbase-daemon.sh --config /etc/hbase/conf/ stop master"
+exitCode=0
+output=stopping master.
+error=
+00:14:43,783        DEBUG CommandExecutor::executeInParallel:37 - Executing command {ps aux | egrep '[o]rg.apache.hadoop.hbase.master.HMaster' | awk '{print $2}' |  xargs -r kill} on hosts [192.168.56.101]
+00:14:43,783        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:43,841        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; ps aux | egrep '[o]rg.apache.hadoop.hbase.master.HMaster' | awk '{print $2}' |  xargs -r kill
+00:14:43,843        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:14:44,844        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; ps aux | egrep '[o]rg.apache.hadoop.hbase.master.HMaster' | awk '{print $2}' |  xargs -r kill
+exitCode=0
+output=
+error=
+00:14:44,844        DEBUG Component::stopMasters:536 - regionserver service 
+00:14:44,844        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hbase/bin/hbase-daemon.sh --config /etc/hbase/conf/ stop regionserver} on hosts [192.168.56.101]
+00:14:44,844        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:14:44,897        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hbase -c "umask 000; /usr/lib/hbase/bin/hbase-daemon.sh --config /etc/hbase/conf/ stop regionserver"
+00:14:44,899        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:15:44,952        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hbase -c "umask 000; /usr/lib/hbase/bin/hbase-daemon.sh --config /etc/hbase/conf/ stop regionserver"
+exitCode=0
+output=stopping regionserver...........................................................
+error=
+00:15:44,952        DEBUG CommandExecutor::executeInParallel:37 - Executing command {ps aux | egrep '[r]egionserver|[o]rg.apache.hadoop.hbase.regionserver.HRegionServer' | awk '{print $2}' |  xargs -r kill} on hosts [192.168.56.101]
+00:15:44,952        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:15:45,007        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; ps aux | egrep '[r]egionserver|[o]rg.apache.hadoop.hbase.regionserver.HRegionServer' | awk '{print $2}' |  xargs -r kill
+00:15:45,009        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:15:46,011        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; ps aux | egrep '[r]egionserver|[o]rg.apache.hadoop.hbase.regionserver.HRegionServer' | awk '{print $2}' |  xargs -r kill
+exitCode=-1
+output=
+error=
+00:15:46,011        DEBUG Component::stopAll:516 - Issued stop command to all hbase hosts. Waiting for 01:00 minutes:seconds
+00:16:46,010        DEBUG SSHUtils::readUserInput:212 - Waiting for user input on Do you want to export HBase tables?
+00:16:50,556        DEBUG SSHUtils::readUserInput:243 - Received user input. Time taken by user is (hh:mm:ss) 00:00:04
+00:16:50,556         INFO Component::performPreUpgradeActivities:339 - Performing pre-upgrade activities for zookeeper
+00:16:50,557         INFO Component::pullConfigurationsFromAllHosts:353 - Pulling down all configurations for zookeeper from all hosts
+00:16:50,557        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:16:50,557        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:50,611        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l zookeeper -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf/"
+00:16:50,613        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:16:51,614        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l zookeeper -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf/"
+exitCode=0
+output=
+error=
+00:16:51,614        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/<HOSTNAME>/conf/zookeeper-conf-pre-upgrade.tgz -C /etc/zookeeper/conf// ./} on hosts [192.168.56.101]
+00:16:51,614        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:51,667        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf/zookeeper-conf-pre-upgrade.tgz -C /etc/zookeeper/conf// ./
+00:16:51,669        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:16:52,671        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf/zookeeper-conf-pre-upgrade.tgz -C /etc/zookeeper/conf// ./
+exitCode=0
+output=
+error=
+00:16:52,672        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:16:52,672        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:52,689        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf/
+exitCode=0
+output=
+error=
+00:16:52,690        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:16:52,690        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:52,690        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf/zookeeper-conf-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf//
+00:16:52,782        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=2220, fileName=zookeeper-conf-pre-upgrade.tgz
+00:16:52,784        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf/zookeeper-conf-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf//
+exitCode=-1
+output=
+error=
+00:16:52,784        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/<HOSTNAME>/conf/zookeeper-conf-pre-upgrade.tgz -C .//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:16:52,784        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:52,799        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf/zookeeper-conf-pre-upgrade.tgz -C .//./hadoop-upgrade/pre-upgrade/service-config/zookeeper/192.168.56.101/conf/
+exitCode=0
+output=
+error=
+00:16:52,799         INFO Component::backupInstallation:127 - Backing up the installation home directory (/usr/lib/zookeeper) for zookeeper from 192.168.56.101
+00:16:52,799        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/<HOSTNAME>/} on hosts [192.168.56.101]
+00:16:52,800        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:52,853        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l zookeeper -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/"
+00:16:52,855        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:16:53,856        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l zookeeper -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/"
+exitCode=0
+output=
+error=
+00:16:53,857        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/<HOSTNAME>/zookeeper-installation-pre-upgrade.tgz -C /usr/lib/zookeeper/ ./} on hosts [192.168.56.101]
+00:16:53,857        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:53,907        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/zookeeper-installation-pre-upgrade.tgz -C /usr/lib/zookeeper/ ./
+00:16:53,909        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:16:54,910        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/zookeeper-installation-pre-upgrade.tgz -C /usr/lib/zookeeper/ ./
+exitCode=0
+output=
+error=
+00:16:54,910        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/zookeeper/<HOSTNAME>/} on hosts [192.168.56.101]
+00:16:54,911        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:54,924        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/
+exitCode=0
+output=
+error=
+00:16:54,925        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:16:54,925        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:54,925        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/zookeeper-installation-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101//
+00:16:54,999        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=2363393, fileName=zookeeper-installation-pre-upgrade.tgz
+00:16:55,089        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/zookeeper-installation-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101//
+exitCode=0
+output=
+error=
+00:16:55,090        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/<HOSTNAME>/} on hosts [192.168.56.101]
+00:16:55,091        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:55,148        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l zookeeper -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/"
+00:16:55,151        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:16:56,153        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l zookeeper -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/"
+exitCode=0
+output=
+error=
+00:16:56,153        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/<HOSTNAME>/zookeeper-data-dir-pre-upgrade.tgz -C /grid0/hadoop/zookeeper/ ./} on hosts [192.168.56.101]
+00:16:56,153        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:16:56,204        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/zookeeper-data-dir-pre-upgrade.tgz -C /grid0/hadoop/zookeeper/ ./
+00:16:56,206        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:17:05,214        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/zookeeper-data-dir-pre-upgrade.tgz -C /grid0/hadoop/zookeeper/ ./
+exitCode=0
+output=
+error=
+00:17:05,215        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/zookeeper/<HOSTNAME>/} on hosts [192.168.56.101]
+00:17:05,215        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:17:05,229        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/
+exitCode=0
+output=
+error=
+00:17:05,229        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:17:05,229        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:17:05,230        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/zookeeper-data-dir-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101//
+00:17:05,325        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=943751, fileName=zookeeper-data-dir-pre-upgrade.tgz
+00:17:05,355        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101/zookeeper-data-dir-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/zookeeper/192.168.56.101//
+exitCode=0
+output=
+error=
+00:17:05,356         INFO Component::stopSlaves:551 - Stopping all slave services for zookeeper
+00:17:05,356         INFO Component::stopMasters:532 - Stopping all master services for zookeeper
+00:17:05,356        DEBUG Component::stopMasters:536 - zookeeper service 
+00:17:05,356        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/zookeeper/bin/zkServer.sh stop } on hosts [192.168.56.101]
+00:17:05,356        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:17:05,409        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l zookeeper -c "umask 000; /usr/lib/zookeeper/bin/zkServer.sh stop "
+00:17:05,411        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:17:06,412         WARN CommandExecutor::printResults:357 - 
+hostname=192.168.56.101
+command=su -l zookeeper -c "umask 000; /usr/lib/zookeeper/bin/zkServer.sh stop "
+exitCode=0
+output=Stopping zookeeper ... STOPPED
+error=JMX enabled by default
+Using config: /usr/lib/zookeeper/bin/../conf/zoo.cfg
+00:17:06,413        DEBUG CommandExecutor::executeInParallel:37 - Executing command {ps aux | egrep '[z]ookeeper|[o]rg.apache.zookeeper.server.quorum.QuorumPeerMain' | awk '{print $2}' |  xargs -r kill} on hosts [192.168.56.101]
+00:17:06,413        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:17:06,488        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; ps aux | egrep '[z]ookeeper|[o]rg.apache.zookeeper.server.quorum.QuorumPeerMain' | awk '{print $2}' |  xargs -r kill
+00:17:06,490        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:17:07,492        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; ps aux | egrep '[z]ookeeper|[o]rg.apache.zookeeper.server.quorum.QuorumPeerMain' | awk '{print $2}' |  xargs -r kill
+exitCode=-1
+output=
+error=
+00:17:07,492        DEBUG Component::stopAll:516 - Issued stop command to all zookeeper hosts. Waiting for 01:00 minutes:seconds
+00:18:07,492        DEBUG SSHUtils::readUserInput:212 - Waiting for user input on We are about to stop the MapReduce. Please finish all your MapReduce activities, if any, such as distcp etc that you want to perform before upgrade. Are you ready to stop Mapreduce ?
+00:18:52,047        DEBUG SSHUtils::readUserInput:243 - Received user input. Time taken by user is (hh:mm:ss) 00:00:44
+00:18:52,047         INFO Component::performPreUpgradeActivities:339 - Performing pre-upgrade activities for mapreduce
+00:18:52,048         INFO Component::pullConfigurationsFromAllHosts:353 - Pulling down all configurations for mapreduce from all hosts
+00:18:52,048        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:18:52,048        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:18:52,103        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf/"
+00:18:52,105        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:18:53,106        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf/"
+exitCode=0
+output=
+error=
+00:18:53,106        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/<HOSTNAME>/conf/mapreduce-conf-pre-upgrade.tgz -C /etc/hadoop/conf// ./} on hosts [192.168.56.101]
+00:18:53,107        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:18:53,175        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf/mapreduce-conf-pre-upgrade.tgz -C /etc/hadoop/conf// ./
+00:18:53,178        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:18:54,179        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf/mapreduce-conf-pre-upgrade.tgz -C /etc/hadoop/conf// ./
+exitCode=0
+output=
+error=
+00:18:54,180        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:18:54,180        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:18:54,196        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf/
+exitCode=0
+output=
+error=
+00:18:54,197        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:18:54,197        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:18:54,197        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf/mapreduce-conf-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf//
+00:18:54,264        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=16202, fileName=mapreduce-conf-pre-upgrade.tgz
+00:18:54,267        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf/mapreduce-conf-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf//
+exitCode=-1
+output=
+error=
+00:18:54,267        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/<HOSTNAME>/conf/mapreduce-conf-pre-upgrade.tgz -C .//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:18:54,267        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:18:54,283        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf/mapreduce-conf-pre-upgrade.tgz -C .//./hadoop-upgrade/pre-upgrade/service-config/mapreduce/192.168.56.101/conf/
+exitCode=0
+output=
+error=
+00:18:54,283         INFO Component::backupInstallation:127 - Backing up the installation home directory (/usr/lib/hadoop) for mapreduce from 192.168.56.101
+00:18:54,284        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/<HOSTNAME>/} on hosts [192.168.56.101]
+00:18:54,284        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:18:54,338        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/192.168.56.101/"
+00:18:54,341        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:18:55,342        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/192.168.56.101/"
+exitCode=0
+output=
+error=
+00:18:55,342        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/<HOSTNAME>/mapreduce-installation-pre-upgrade.tgz -C /usr/lib/hadoop/ ./} on hosts [192.168.56.101]
+00:18:55,342        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:18:55,396        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/192.168.56.101/mapreduce-installation-pre-upgrade.tgz -C /usr/lib/hadoop/ ./
+00:18:55,398        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:18:58,401        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/192.168.56.101/mapreduce-installation-pre-upgrade.tgz -C /usr/lib/hadoop/ ./
+exitCode=0
+output=
+error=
+00:18:58,402        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/mapreduce/<HOSTNAME>/} on hosts [192.168.56.101]
+00:18:58,402        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:18:58,417        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/mapreduce/192.168.56.101/
+exitCode=0
+output=
+error=
+00:18:58,418        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:18:58,418        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:18:58,418        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/192.168.56.101/mapreduce-installation-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/mapreduce/192.168.56.101//
+00:18:58,487        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=35354297, fileName=mapreduce-installation-pre-upgrade.tgz
+00:18:59,591        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/mapreduce/192.168.56.101/mapreduce-installation-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/mapreduce/192.168.56.101//
+exitCode=0
+output=
+error=
+00:18:59,592         INFO MapReduce::captureJobTrackerUIInformation:69 - Capturing JobTracker UI snapshots
+00:18:59,592        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/} on hosts [192.168.56.101]
+00:18:59,592        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:18:59,645        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/"
+00:18:59,647        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:00,648        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/"
+exitCode=0
+output=
+error=
+00:19:00,648        DEBUG CommandExecutor::executeInParallel:37 - Executing command {wget http://192.168.56.101:50030/jobtracker.jsp -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//jobtracker.html} on hosts [192.168.56.101]
+00:19:00,649        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:00,700        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; wget http://192.168.56.101:50030/jobtracker.jsp -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//jobtracker.html"
+00:19:00,702        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:01,704         WARN CommandExecutor::printResults:357 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; wget http://192.168.56.101:50030/jobtracker.jsp -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//jobtracker.html"
+exitCode=0
+output=
+error=--2012-11-01 00:19:00--  http://192.168.56.101:50030/jobtracker.jsp
+Connecting to 192.168.56.101:50030... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3559 (3.5K) [text/html]
+Saving to: “/tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//jobtracker.html”
+
+     0K ...                                                   100%  346M=0s
+
+2012-11-01 00:19:00 (346 MB/s) - “/tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//jobtracker.html” saved [3559/3559]
+00:19:01,704        DEBUG CommandExecutor::executeInParallel:37 - Executing command {wget http://192.168.56.101:50030/machines.jsp?type=active -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-live-nodes.html} on hosts [192.168.56.101]
+00:19:01,704        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:01,779        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; wget http://192.168.56.101:50030/machines.jsp?type=active -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-live-nodes.html"
+00:19:01,781        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:02,783         WARN CommandExecutor::printResults:357 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; wget http://192.168.56.101:50030/machines.jsp?type=active -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-live-nodes.html"
+exitCode=0
+output=
+error=--2012-11-01 00:19:01--  http://192.168.56.101:50030/machines.jsp?type=active
+Connecting to 192.168.56.101:50030... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1209 (1.2K) [text/html]
+Saving to: “/tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-live-nodes.html”
+
+     0K .                                                     100%  256M=0s
+
+2012-11-01 00:19:01 (256 MB/s) - “/tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-live-nodes.html” saved [1209/1209]
+00:19:02,783        DEBUG CommandExecutor::executeInParallel:37 - Executing command {wget http://192.168.56.101:50030/machines.jsp?type=blacklisted -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-blacklisted-nodes.html} on hosts [192.168.56.101]
+00:19:02,783        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:08,275        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; wget http://192.168.56.101:50030/machines.jsp?type=blacklisted -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-blacklisted-nodes.html"
+00:19:08,277        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:09,278         WARN CommandExecutor::printResults:357 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; wget http://192.168.56.101:50030/machines.jsp?type=blacklisted -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-blacklisted-nodes.html"
+exitCode=0
+output=
+error=--2012-11-01 00:19:08--  http://192.168.56.101:50030/machines.jsp?type=blacklisted
+Connecting to 192.168.56.101:50030... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 331 [text/html]
+Saving to: “/tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-blacklisted-nodes.html”
+
+     0K                                                       100% 67.5M=0s
+
+2012-11-01 00:19:08 (67.5 MB/s) - “/tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-blacklisted-nodes.html” saved [331/331]
+00:19:09,278        DEBUG CommandExecutor::executeInParallel:37 - Executing command {wget http://192.168.56.101:50030/machines.jsp?type=excluded -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-excluded-nodes.html} on hosts [192.168.56.101]
+00:19:09,278        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:09,335        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; wget http://192.168.56.101:50030/machines.jsp?type=excluded -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-excluded-nodes.html"
+00:19:09,337        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:10,338         WARN CommandExecutor::printResults:357 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; wget http://192.168.56.101:50030/machines.jsp?type=excluded -O /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-excluded-nodes.html"
+exitCode=0
+output=
+error=--2012-11-01 00:19:09--  http://192.168.56.101:50030/machines.jsp?type=excluded
+Connecting to 192.168.56.101:50030... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 303 [text/html]
+Saving to: “/tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-excluded-nodes.html”
+
+     0K                                                       100% 62.2M=0s
+
+2012-11-01 00:19:09 (62.2 MB/s) - “/tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//mapred-excluded-nodes.html” saved [303/303]
+00:19:10,339        DEBUG CommandExecutor::executeInParallel:37 - Executing command {touch /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/pre-upgrade-jt-ui-info.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/pre-upgrade-jt-ui-info.tgz --exclude pre-upgrade-jt-ui-info.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html// ./} on hosts [192.168.56.101]
+00:19:10,339        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:10,393        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/pre-upgrade-jt-ui-info.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/pre-upgrade-jt-ui-info.tgz --exclude pre-upgrade-jt-ui-info.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html// ./"
+00:19:10,395        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:11,397        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/pre-upgrade-jt-ui-info.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/pre-upgrade-jt-ui-info.tgz --exclude pre-upgrade-jt-ui-info.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html// ./"
+exitCode=0
+output=
+error=
+00:19:11,397        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/} on hosts [192.168.56.101]
+00:19:11,397        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:11,409        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/
+exitCode=0
+output=
+error=
+00:19:11,410        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:19:11,410        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:11,410        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/pre-upgrade-jt-ui-info.tgz .//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//
+00:19:11,497        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=1911, fileName=pre-upgrade-jt-ui-info.tgz
+00:19:11,499        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/pre-upgrade-jt-ui-info.tgz .//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html//
+exitCode=-1
+output=
+error=
+00:19:11,499        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/pre-upgrade-jt-ui-info.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/} on hosts [192.168.56.101]
+00:19:11,499        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:11,513        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/pre-upgrade-jt-ui-info.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/mapreduce/html/
+exitCode=0
+output=
+error=
+00:19:11,513         INFO Component::stopSlaves:551 - Stopping all slave services for mapreduce
+00:19:11,514         INFO Component::stopMasters:532 - Stopping all master services for mapreduce
+00:19:11,514        DEBUG Component::stopMasters:536 - jobtracker service 
+00:19:11,514        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop jobtracker} on hosts [192.168.56.101]
+00:19:11,514        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:11,564        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop jobtracker"
+00:19:11,567        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:17,572        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop jobtracker"
+exitCode=0
+output=stopping jobtracker
+error=
+00:19:17,572        DEBUG CommandExecutor::executeInParallel:37 - Executing command {ps aux | egrep '[D]proc_jobtracker|[o]rg.apache.hadoop.mapred.JobTracker' | awk '{print $2}' |  xargs -r kill} on hosts [192.168.56.101]
+00:19:17,572        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:17,684        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; ps aux | egrep '[D]proc_jobtracker|[o]rg.apache.hadoop.mapred.JobTracker' | awk '{print $2}' |  xargs -r kill
+00:19:17,686        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:18,688        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; ps aux | egrep '[D]proc_jobtracker|[o]rg.apache.hadoop.mapred.JobTracker' | awk '{print $2}' |  xargs -r kill
+exitCode=0
+output=
+error=
+00:19:18,688        DEBUG Component::stopMasters:536 - historyserver service 
+00:19:18,688        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop historyserver} on hosts [192.168.56.101]
+00:19:18,688        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:18,745        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop historyserver"
+00:19:18,748        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:24,754        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop historyserver"
+exitCode=0
+output=stopping historyserver
+error=
+00:19:24,755        DEBUG CommandExecutor::executeInParallel:37 - Executing command {ps aux | egrep '[D]proc_historyserver|[o]rg.apache.hadoop.mapred.JobHistoryServer' | awk '{print $2}' |  xargs -r kill} on hosts [192.168.56.101]
+00:19:24,755        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:24,812        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; ps aux | egrep '[D]proc_historyserver|[o]rg.apache.hadoop.mapred.JobHistoryServer' | awk '{print $2}' |  xargs -r kill
+00:19:24,814        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:25,815        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; ps aux | egrep '[D]proc_historyserver|[o]rg.apache.hadoop.mapred.JobHistoryServer' | awk '{print $2}' |  xargs -r kill
+exitCode=0
+output=
+error=
+00:19:25,816        DEBUG Component::stopMasters:536 - tasktracker service 
+00:19:25,816        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop tasktracker} on hosts [192.168.56.101]
+00:19:25,816        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:25,871        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l mapred -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop tasktracker"
+00:19:25,873        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:31,879        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l mapred -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop tasktracker"
+exitCode=0
+output=stopping tasktracker
+error=
+00:19:31,879        DEBUG CommandExecutor::executeInParallel:37 - Executing command {ps aux | egrep '[D]proc_tasktracker|[o]rg.apache.hadoop.mapred.TaskTracker' | awk '{print $2}' |  xargs -r kill} on hosts [192.168.56.101]
+00:19:31,879        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:19:31,935        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; ps aux | egrep '[D]proc_tasktracker|[o]rg.apache.hadoop.mapred.TaskTracker' | awk '{print $2}' |  xargs -r kill
+00:19:31,937        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:19:32,939        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; ps aux | egrep '[D]proc_tasktracker|[o]rg.apache.hadoop.mapred.TaskTracker' | awk '{print $2}' |  xargs -r kill
+exitCode=0
+output=
+error=
+00:19:32,939        DEBUG Component::stopAll:516 - Issued stop command to all mapreduce hosts. Waiting for 01:00 minutes:seconds
+00:20:32,938        DEBUG SSHUtils::readUserInput:212 - Waiting for user input on We are about to stop the HDFS. Please finish all your back up activities, if any, that you want to perform before upgrade. Are you ready to stop HDFS ?
+00:22:28,657        DEBUG SSHUtils::readUserInput:243 - Received user input. Time taken by user is (hh:mm:ss) 00:01:55
+00:22:28,657         INFO Component::performPreUpgradeActivities:339 - Performing pre-upgrade activities for hdfs
+00:22:28,657         INFO Component::pullConfigurationsFromAllHosts:353 - Pulling down all configurations for hdfs from all hosts
+00:22:28,658        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:22:28,658        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:28,711        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf/"
+00:22:28,713        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:29,714        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf/"
+exitCode=0
+output=
+error=
+00:22:29,717        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/<HOSTNAME>/conf/hdfs-conf-pre-upgrade.tgz -C /etc/hadoop/conf// ./} on hosts [192.168.56.101]
+00:22:29,717        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:29,773        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf/hdfs-conf-pre-upgrade.tgz -C /etc/hadoop/conf// ./
+00:22:29,775        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:30,776        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf/hdfs-conf-pre-upgrade.tgz -C /etc/hadoop/conf// ./
+exitCode=0
+output=
+error=
+00:22:30,777        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/service-config/hdfs/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:22:30,777        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:30,797        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf/
+exitCode=0
+output=
+error=
+00:22:30,797        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:22:30,797        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:30,798        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf/hdfs-conf-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf//
+00:22:30,869        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=16202, fileName=hdfs-conf-pre-upgrade.tgz
+00:22:30,871        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf/hdfs-conf-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf//
+exitCode=-1
+output=
+error=
+00:22:30,872        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/service-config/hdfs/<HOSTNAME>/conf/hdfs-conf-pre-upgrade.tgz -C .//./hadoop-upgrade/pre-upgrade/service-config/hdfs/<HOSTNAME>/conf/} on hosts [192.168.56.101]
+00:22:30,872        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:30,891        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf/hdfs-conf-pre-upgrade.tgz -C .//./hadoop-upgrade/pre-upgrade/service-config/hdfs/192.168.56.101/conf/
+exitCode=0
+output=
+error=
+00:22:30,891         INFO Component::backupInstallation:127 - Backing up the installation home directory (/usr/lib/hadoop) for hdfs from 192.168.56.101
+00:22:30,891        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/<HOSTNAME>/} on hosts [192.168.56.101]
+00:22:30,892        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:30,947        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/"
+00:22:30,949        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:31,950        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/"
+exitCode=0
+output=
+error=
+00:22:31,950        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/<HOSTNAME>/hdfs-installation-pre-upgrade.tgz -C /usr/lib/hadoop/ ./} on hosts [192.168.56.101]
+00:22:31,950        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:32,003        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-installation-pre-upgrade.tgz -C /usr/lib/hadoop/ ./
+00:22:32,006        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:35,008        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-installation-pre-upgrade.tgz -C /usr/lib/hadoop/ ./
+exitCode=0
+output=
+error=
+00:22:35,009        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/hdfs/<HOSTNAME>/} on hosts [192.168.56.101]
+00:22:35,009        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:35,024        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/
+exitCode=0
+output=
+error=
+00:22:35,024        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:22:35,024        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:35,024        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-installation-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101//
+00:22:35,094        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=35354297, fileName=hdfs-installation-pre-upgrade.tgz
+00:22:36,291        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-installation-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101//
+exitCode=0
+output=
+error=
+00:22:36,291        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  dfsadmin -upgradeProgress status} on hosts [192.168.56.101]
+00:22:36,291        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:36,342        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  dfsadmin -upgradeProgress status"
+00:22:36,344        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:38,346        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  dfsadmin -upgradeProgress status"
+exitCode=0
+output=Upgrade for version -32 has been completed.
+Upgrade is not finalized.
+error=
+00:22:38,346        DEBUG SSHUtils::readUserInput:212 - Waiting for user input on There is already a upgrade in process. Are you sure you want to continue without finalizing it?
+00:22:44,418        DEBUG SSHUtils::readUserInput:243 - Received user input. Time taken by user is (hh:mm:ss) 00:00:06
+00:22:44,419        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  dfsadmin -safemode enter} on hosts [192.168.56.101]
+00:22:44,419        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:44,472        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  dfsadmin -safemode enter"
+00:22:44,474        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:46,477        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  dfsadmin -safemode enter"
+exitCode=0
+output=Safe mode is ON
+error=
+00:22:46,477        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/ dfsadmin -saveNamespace} on hosts [192.168.56.101]
+00:22:46,477        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:46,553        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/ dfsadmin -saveNamespace"
+00:22:46,556        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:48,558        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/ dfsadmin -saveNamespace"
+exitCode=0
+output=
+error=
+00:22:48,558         INFO HDFS::captureFileAndBlockInformation:171 - Capturing file list and block information of HDFS
+00:22:48,558        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/} on hosts [192.168.56.101]
+00:22:48,559        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:48,611        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/"
+00:22:48,612        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:49,613        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/"
+exitCode=0
+output=
+error=
+00:22:49,613        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  fsck / > /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/hdfs-fsck-pre-upgrade.log} on hosts [192.168.56.101]
+00:22:49,614        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:49,683        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  fsck / > /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/hdfs-fsck-pre-upgrade.log"
+00:22:49,686        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:51,688        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  fsck / > /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/hdfs-fsck-pre-upgrade.log"
+exitCode=0
+output=
+error=
+00:22:51,688        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  fs -lsr / > /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/hdfs-lsr-pre-upgrade.log} on hosts [192.168.56.101]
+00:22:51,688        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:51,740        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  fs -lsr / > /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/hdfs-lsr-pre-upgrade.log"
+00:22:51,743        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:54,745        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  fs -lsr / > /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/hdfs-lsr-pre-upgrade.log"
+exitCode=0
+output=
+error=
+00:22:54,745        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  dfsadmin -report  > /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/hdfs-report-pre-upgrade.log} on hosts [192.168.56.101]
+00:22:54,746        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:54,815        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  dfsadmin -report  > /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/hdfs-report-pre-upgrade.log"
+00:22:54,818        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:56,820        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop --config /etc/hadoop/conf/  dfsadmin -report  > /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/hdfs-report-pre-upgrade.log"
+exitCode=0
+output=
+error=
+00:22:56,820        DEBUG CommandExecutor::executeInParallel:37 - Executing command {touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/pre-upgrade-file-block-info.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/pre-upgrade-file-block-info.tgz --exclude pre-upgrade-file-block-info.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log// ./} on hosts [192.168.56.101]
+00:22:56,820        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:56,870        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/pre-upgrade-file-block-info.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/pre-upgrade-file-block-info.tgz --exclude pre-upgrade-file-block-info.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log// ./"
+00:22:56,872        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:57,873        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/pre-upgrade-file-block-info.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/pre-upgrade-file-block-info.tgz --exclude pre-upgrade-file-block-info.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log// ./"
+exitCode=0
+output=
+error=
+00:22:57,873        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/} on hosts [192.168.56.101]
+00:22:57,873        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:57,886        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/
+exitCode=0
+output=
+error=
+00:22:57,886        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:22:57,886        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:57,886        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log//pre-upgrade-file-block-info.tgz .//./hadoop-upgrade/pre-upgrade/stats/hdfs/log//
+00:22:58,015        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=15998, fileName=pre-upgrade-file-block-info.tgz
+00:22:58,017        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/log//pre-upgrade-file-block-info.tgz .//./hadoop-upgrade/pre-upgrade/stats/hdfs/log//
+exitCode=-1
+output=
+error=
+00:22:58,018        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/pre-upgrade-file-block-info.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/} on hosts [192.168.56.101]
+00:22:58,018        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:58,032        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/pre-upgrade-file-block-info.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/hdfs/log/
+exitCode=0
+output=
+error=
+00:22:58,033         INFO HDFS::captureNameNodeUIInformation:208 - Capturing namenode UI information
+00:22:58,033        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/} on hosts [192.168.56.101]
+00:22:58,033        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:58,086        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/"
+00:22:58,089        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:22:59,091        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/"
+exitCode=0
+output=
+error=
+00:22:59,091        DEBUG CommandExecutor::executeInParallel:37 - Executing command {wget http://192.168.56.101:50070/dfshealth.jsp -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfshealth.html} on hosts [192.168.56.101]
+00:22:59,091        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:22:59,141        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; wget http://192.168.56.101:50070/dfshealth.jsp -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfshealth.html"
+00:22:59,143        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:00,145         WARN CommandExecutor::printResults:357 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; wget http://192.168.56.101:50070/dfshealth.jsp -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfshealth.html"
+exitCode=0
+output=
+error=--2012-11-01 00:22:59--  http://192.168.56.101:50070/dfshealth.jsp
+Connecting to 192.168.56.101:50070... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2404 (2.3K) [text/html]
+Saving to: “/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfshealth.html”
+
+     0K ..                                                    100% 31.2M=0s
+
+2012-11-01 00:22:59 (31.2 MB/s) - “/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfshealth.html” saved [2404/2404]
+00:23:00,145        DEBUG CommandExecutor::executeInParallel:37 - Executing command {wget http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=LIVE -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-live-nodes.html} on hosts [192.168.56.101]
+00:23:00,145        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:00,195        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; wget http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=LIVE -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-live-nodes.html"
+00:23:00,197        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:02,199         WARN CommandExecutor::printResults:357 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; wget http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=LIVE -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-live-nodes.html"
+exitCode=0
+output=
+error=--2012-11-01 00:23:00--  http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=LIVE
+Connecting to 192.168.56.101:50070... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3464 (3.4K) [text/html]
+Saving to: “/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-live-nodes.html”
+
+     0K ...                                                   100% 7.75M=0s
+
+2012-11-01 00:23:01 (7.75 MB/s) - “/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-live-nodes.html” saved [3464/3464]
+00:23:02,200        DEBUG CommandExecutor::executeInParallel:37 - Executing command {wget http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=DEAD -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-dead-nodes.html} on hosts [192.168.56.101]
+00:23:02,200        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:02,269        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; wget http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=DEAD -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-dead-nodes.html"
+00:23:02,271        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:04,273         WARN CommandExecutor::printResults:357 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; wget http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=DEAD -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-dead-nodes.html"
+exitCode=0
+output=
+error=--2012-11-01 00:23:02--  http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=DEAD
+Connecting to 192.168.56.101:50070... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 899 [text/html]
+Saving to: “/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-dead-nodes.html”
+
+     0K                                                       100% 96.2M=0s
+
+2012-11-01 00:23:03 (96.2 MB/s) - “/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-dead-nodes.html” saved [899/899]
+00:23:04,274        DEBUG CommandExecutor::executeInParallel:37 - Executing command {wget http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=DECOMMISSIONING -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-decommissioning-nodes.html} on hosts [192.168.56.101]
+00:23:04,274        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:04,329        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; wget http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=DECOMMISSIONING -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-decommissioning-nodes.html"
+00:23:04,331        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:06,333         WARN CommandExecutor::printResults:357 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; wget http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=DECOMMISSIONING -O /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-decommissioning-nodes.html"
+exitCode=0
+output=
+error=--2012-11-01 00:23:04--  http://192.168.56.101:50070/dfsnodelist.jsp?whatNodes=DECOMMISSIONING
+Connecting to 192.168.56.101:50070... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 927 [text/html]
+Saving to: “/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-decommissioning-nodes.html”
+
+     0K                                                       100%  165M=0s
+
+2012-11-01 00:23:05 (165 MB/s) - “/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//dfs-decommissioning-nodes.html” saved [927/927]
+00:23:06,334        DEBUG CommandExecutor::executeInParallel:37 - Executing command {touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/pre-upgrade-nn-ui-info.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/pre-upgrade-nn-ui-info.tgz --exclude pre-upgrade-nn-ui-info.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html// ./} on hosts [192.168.56.101]
+00:23:06,334        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:06,408        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/pre-upgrade-nn-ui-info.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/pre-upgrade-nn-ui-info.tgz --exclude pre-upgrade-nn-ui-info.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html// ./"
+00:23:06,410        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:07,412        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; touch /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/pre-upgrade-nn-ui-info.tgz ; tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/pre-upgrade-nn-ui-info.tgz --exclude pre-upgrade-nn-ui-info.tgz -C /tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html// ./"
+exitCode=0
+output=
+error=
+00:23:07,412        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/} on hosts [192.168.56.101]
+00:23:07,412        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:07,424        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/
+exitCode=0
+output=
+error=
+00:23:07,425        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:23:07,425        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:07,425        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/pre-upgrade-nn-ui-info.tgz .//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//
+00:23:07,496        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=1808, fileName=pre-upgrade-nn-ui-info.tgz
+00:23:07,498        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/pre-upgrade-nn-ui-info.tgz .//./hadoop-upgrade/pre-upgrade/stats/hdfs/html//
+exitCode=-1
+output=
+error=
+00:23:07,498        DEBUG CommandExecutor::executeInParallel:37 - Executing command {tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/pre-upgrade-nn-ui-info.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/} on hosts [192.168.56.101]
+00:23:07,499        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:07,512        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=tar -xzpf .//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/pre-upgrade-nn-ui-info.tgz -C .//./hadoop-upgrade/pre-upgrade/stats/hdfs/html/
+exitCode=0
+output=
+error=
+00:23:07,512         INFO Component::stopSlaves:551 - Stopping all slave services for hdfs
+00:23:07,512         INFO Component::stopMasters:532 - Stopping all master services for hdfs
+00:23:07,512        DEBUG Component::stopMasters:536 - namenode service 
+00:23:07,513        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop namenode} on hosts [192.168.56.101]
+00:23:07,513        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:07,564        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop namenode"
+00:23:07,566        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:13,571        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop namenode"
+exitCode=0
+output=stopping namenode
+error=
+00:23:13,572        DEBUG CommandExecutor::executeInParallel:37 - Executing command {ps aux | egrep '[D]proc_namenode|[o]rg.apache.hadoop.hdfs.server.namenode.NameNode' | awk '{print $2}' |  xargs -r kill} on hosts [192.168.56.101]
+00:23:13,572        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:13,625        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; ps aux | egrep '[D]proc_namenode|[o]rg.apache.hadoop.hdfs.server.namenode.NameNode' | awk '{print $2}' |  xargs -r kill
+00:23:13,628        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:14,629        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; ps aux | egrep '[D]proc_namenode|[o]rg.apache.hadoop.hdfs.server.namenode.NameNode' | awk '{print $2}' |  xargs -r kill
+exitCode=0
+output=
+error=
+00:23:14,629        DEBUG Component::stopMasters:536 - secondarynamenode service 
+00:23:14,629        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop secondarynamenode} on hosts [192.168.56.101]
+00:23:14,629        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:14,681        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop secondarynamenode"
+00:23:14,683        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:20,688        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop secondarynamenode"
+exitCode=0
+output=stopping secondarynamenode
+error=
+00:23:20,689        DEBUG CommandExecutor::executeInParallel:37 - Executing command {ps aux | egrep '[D]proc_secondarynamenode|[o]rg.apache.hadoop.hdfs.server.namenode.SecondaryNameNode' | awk '{print $2}' |  xargs -r kill} on hosts [192.168.56.101]
+00:23:20,689        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:20,742        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; ps aux | egrep '[D]proc_secondarynamenode|[o]rg.apache.hadoop.hdfs.server.namenode.SecondaryNameNode' | awk '{print $2}' |  xargs -r kill
+00:23:20,744        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:21,745        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; ps aux | egrep '[D]proc_secondarynamenode|[o]rg.apache.hadoop.hdfs.server.namenode.SecondaryNameNode' | awk '{print $2}' |  xargs -r kill
+exitCode=0
+output=
+error=
+00:23:21,745        DEBUG Component::stopMasters:536 - datanode service 
+00:23:21,745        DEBUG CommandExecutor::executeInParallel:37 - Executing command {/usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop datanode} on hosts [192.168.56.101]
+00:23:21,745        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:21,796        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop datanode"
+00:23:21,798        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:27,802        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; /usr/lib/hadoop/bin/hadoop-daemon.sh --config /etc/hadoop/conf/ stop datanode"
+exitCode=0
+output=stopping datanode
+error=
+00:23:27,803        DEBUG CommandExecutor::executeInParallel:37 - Executing command {ps aux | egrep '[D]proc_datanode|[o]rg.apache.hadoop.hdfs.server.datanode.DataNode' | awk '{print $2}' |  xargs -r kill} on hosts [192.168.56.101]
+00:23:27,803        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:23:27,864        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000; ps aux | egrep '[D]proc_datanode|[o]rg.apache.hadoop.hdfs.server.datanode.DataNode' | awk '{print $2}' |  xargs -r kill
+00:23:27,866        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:23:28,868        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000; ps aux | egrep '[D]proc_datanode|[o]rg.apache.hadoop.hdfs.server.datanode.DataNode' | awk '{print $2}' |  xargs -r kill
+exitCode=0
+output=
+error=
+00:23:28,868        DEBUG Component::stopAll:516 - Issued stop command to all hdfs hosts. Waiting for 01:00 minutes:seconds
+00:24:28,868         INFO HDFS::backupFSImage:74 - Backing up nn image
+00:24:28,891        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/} on hosts [192.168.56.101]
+00:24:28,891        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:24:28,963        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/"
+00:24:28,965        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:24:29,967        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/"
+exitCode=0
+output=
+error=
+00:24:29,967        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-fsimage-mount1-pre-upgrade.tgz -C /grid0/hadoop/hdfs/namenode/ ./} on hosts [192.168.56.101]
+00:24:29,967        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:24:30,019        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-fsimage-mount1-pre-upgrade.tgz -C /grid0/hadoop/hdfs/namenode/ ./
+00:24:30,022        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:24:31,023        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-fsimage-mount1-pre-upgrade.tgz -C /grid0/hadoop/hdfs/namenode/ ./
+exitCode=0
+output=
+error=
+00:24:31,023        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/} on hosts [192.168.56.101]
+00:24:31,023        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:24:31,038        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/
+exitCode=0
+output=
+error=
+00:24:31,038        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:24:31,039        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:24:31,039        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-fsimage-mount1-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101//
+00:24:31,113        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=39655, fileName=hdfs-fsimage-mount1-pre-upgrade.tgz
+00:24:31,116        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-fsimage-mount1-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101//
+exitCode=0
+output=
+error=
+00:24:31,117         INFO HDFS::backupFSImage:122 - Backing up snn image
+00:24:31,128        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/<HOSTNAME>/} on hosts [192.168.56.101]
+00:24:31,128        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:24:31,201        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/"
+00:24:31,203        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:24:32,205        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000; mkdir -m 777 -p  /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/"
+exitCode=0
+output=
+error=
+00:24:32,205        DEBUG CommandExecutor::executeInParallel:37 - Executing command { tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/<HOSTNAME>/hdfs-checkpoint-image-mount1-pre-upgrade.tgz -C /grid0/hadoop/hdfs/namesecondary/ ./} on hosts [192.168.56.101]
+00:24:32,206        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:24:32,256        DEBUG RemoteSSH::executeRemoteCommand:135 - Executing command: su -l hdfs -c "umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-checkpoint-image-mount1-pre-upgrade.tgz -C /grid0/hadoop/hdfs/namesecondary/ ./"
+00:24:32,258        DEBUG RemoteSSH::executeRemoteCommand:148 - Connected to host 192.168.56.101
+00:24:33,259        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command=su -l hdfs -c "umask 000;  tar -czpf /tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-checkpoint-image-mount1-pre-upgrade.tgz -C /grid0/hadoop/hdfs/namesecondary/ ./"
+exitCode=0
+output=
+error=
+00:24:33,260        DEBUG CommandExecutor::executeInParallel:37 - Executing command {mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/hdfs/<HOSTNAME>/} on hosts [192.168.56.101]
+00:24:33,260        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:24:33,271        DEBUG CommandExecutor::printResults:355 - 
+hostname=localhost
+command=mkdir -m 777 -p  .//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/
+exitCode=0
+output=
+error=
+00:24:33,272        DEBUG CommandExecutor::executeInParallel:37 - Executing command scp <user>@<hostname>:<sourceFiles> <destinationDirectoryPath> on hosts [192.168.56.101]
+00:24:33,272        DEBUG CommandExecutor::executeInParallel:48 - Waiting on all commands to finish execution
+00:24:33,272        DEBUG SCPFromRemoteHost::scpFromRemoteHost:106 - scp command will be: scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-checkpoint-image-mount1-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101//
+00:24:33,367        DEBUG SCPFromRemoteHost::scpFromRemoteHost:203 - filesize=14431, fileName=hdfs-checkpoint-image-mount1-pre-upgrade.tgz
+00:24:33,369        DEBUG CommandExecutor::printResults:355 - 
+hostname=192.168.56.101
+command= scp root@192.168.56.101:/tmp//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101/hdfs-checkpoint-image-mount1-pre-upgrade.tgz .//./hadoop-upgrade/pre-upgrade/data/hdfs/192.168.56.101//
+exitCode=-1
+output=
+error=
+00:24:33,369         INFO PreUpgradeProcessor::process:80 - 
+00:24:33,369         INFO PreUpgradeProcessor::process:81 - 
+00:24:33,370         INFO PreUpgradeProcessor::process:82 - -----------------------------------------------------------------------------------------------------------------------------------------
+00:24:33,370         INFO PreUpgradeProcessor::process:83 - ******* Cluster is now ready for upgrade. Please uninstall current null nulls,  install HDP and then perform post upgrade activities *******
+00:24:33,370         INFO PreUpgradeProcessor::process:85 - -----------------------------------------------------------------------------------------------------------------------------------------
+00:24:33,370         INFO PreUpgradeProcessor::process:86 - 
+00:24:33,370         INFO PreUpgradeProcessor::process:87 - 

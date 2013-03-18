@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+    <name>mapred.jobtracker.staging.root.dir</name>
+    <value>/users</value>
+  </property>
+
+  <property>
+    <name>mapred.job.tracker</name>
+    <!-- use fully qualified name -->
+    <value>hadmad02.homedepot.com:54311</value>
+    <description>The host and port that the MapReduce job tracker runs
+    at.  If "local", then jobs are run in-process as a single map
+    and reduce task.
+    </description>
+  </property>
+
+  <property>
+    <name>mapred.local.dir</name>
+    <value>/opt/hd/db/data/01/mapred/local,/opt/hd/db/data/02/mapred/local,/opt/hd/db/data/03/mapred/local,/opt/hd/db/data/04/mapred/local,/opt/hd/db/data/05/mapred/local</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <name>mapred.temp.dir</name>
+    <value>/opt/hd/db/data/01/mapred/tmp,/opt/hd/db/data/02/mapred/tmp,/opt/hd/db/data/03/mapred/tmp,/opt/hd/db/data/04/mapred/tmp,/opt/hd/db/data/05/mapred/tmp</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <name>mapred.system.dir</name>
+    <value>/mapred/system</value>
+    <final>true</final>
+  </property>
+
+  <!-- fair scheduler -->
+  <property>
+    <name>mapred.jobtracker.taskScheduler</name>
+    <value>org.apache.hadoop.mapred.FairScheduler</value>
+    <final>true</final>
+  </property>
+  <property>
+    <name>mapred.fairscheduler.allocation.file</name>
+    <value>/usr/lib/hadoop/conf/fair-scheduler.xml</value>
+    <final>true</final>
+  </property>
+<!--  <property>
+    <name>mapred.fairscheduler.preemption</name>
+    <value>true</value>
+    <final>true</final>
+  </property>
+  -->
+
+  <property>
+    <name>mapred.tasktracker.map.tasks.maximum</name>
+    <value>12</value>
+  </property>
+  <property>
+    <name>mapred.tasktracker.reduce.tasks.maximum</name>
+    <value>9</value>
+  </property>
+  <property>
+    <name>mapred.child.java.opts</name>
+    <value>-Xmx1g</value>
+  </property>
+  <!-- Superceded by mapred.child.java.opts
+  <property>
+    <name>mapred.map.java.opts</name>
+    <value>-Xmx1024m</value>
+  </property>
+  <property>
+    <name>mapred.reduce.java.opts</name>
+    <value>-Xmx1024m</value>
+  </property>
+  -->
+  <property>
+    <name>mapred.child.ulimit</name>
+    <value>2097152</value>
+    <description>Set this to 1.5 times the heap size of mapred.child.java.opts
+      (in bytes)</description>
+  </property>
+  <property>
+    <name>mapred.map.tasks.speculative.execution</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>mapred.reduce.tasks.speculative.execution</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>mapred.jobtracker.completeuserjobs.maximum</name>
+    <value>20</value>
+    <final>true</final>
+  </property>
+  <property>
+    <name>dfs.hosts.exclude</name>
+    <value>/usr/lib/hadoop/conf/dfs_exclude_hosts</value>
+  </property>
+
+  <property>
+    <name>mapred.compress.map.output</name>
+    <value>true</value>
+    <final>false</final>
+  </property>
+  <property>
+    <name>mapred.map.output.compression.codec</name>
+    <value>org.apache.hadoop.io.compress.GzipCodec</value>
+  </property>
+
+  <property>
+    <name>mapred.job.tracker.handler.count</name>
+    <value>10</value>
+  </property>
+
+  <property>
+    <name>mapred.reduce.parallel.copies</name>
+    <value>10</value>
+  </property>
+  <property>
+    <name>mapred.child.env</name>
+    <value>JAVA_LIBRARY_PATH=/usr/lib/hadoop-0.20/lib</value>
+  </property>
+
+</configuration>

@@ -5,6 +5,7 @@
 	that are not installed. Change the usr, home and config-location as needed. -->
 
 <components>
+<!--
 	<component name="hive">
 		<user>hive</user>
 		<home>/usr/lib/hive</home>
@@ -16,13 +17,13 @@
 		<home>/usr/lib/hadoop</home>
 		<config-location>/etc/hadoop/conf/</config-location>
 	</component>
-
+-->
 	<component name="hdfs">
 		<user>hdfs</user>
 		<home>/usr/lib/hadoop</home>
 		<config-location>/etc/hadoop/conf/</config-location>
 	</component>
-	
+<!--
 	<component name="hbase">
 		<user>hbase</user>
 		<home>/usr/lib/hbase</home>
@@ -33,7 +34,7 @@
 		<home>/usr/lib/zookeeper</home>
 		<config-location>/etc/zookeeper/conf/</config-location>
 	</component>
-	
+-->	
 	<!-- 
 	<component name="pig">
 		<user>pig</user>

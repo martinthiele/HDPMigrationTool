@@ -1,0 +1,26 @@
+Safe mode is ON
+Upgrade for version -32 has been completed.
+Upgrade is not finalized.
+Configured Capacity: 15382016000 (14.33 GB)
+Present Capacity: 9114787840 (8.49 GB)
+DFS Remaining: 9002749952 (8.38 GB)
+DFS Used: 112037888 (106.85 MB)
+DFS Used%: 1.23%
+Under replicated blocks: 337
+Blocks with corrupt replicas: 0
+Missing blocks: 0
+
+-------------------------------------------------
+Datanodes available: 1 (1 total, 0 dead)
+
+Name: 192.168.56.101:50010
+Decommission Status : Normal
+Configured Capacity: 15382016000 (14.33 GB)
+DFS Used: 112037888 (106.85 MB)
+Non DFS Used: 6267228160 (5.84 GB)
+DFS Remaining: 9002749952(8.38 GB)
+DFS Used%: 0.73%
+DFS Remaining%: 58.53%
+Last contact: Thu Nov 01 00:22:53 PDT 2012
+
+

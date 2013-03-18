@@ -5,24 +5,25 @@
 	that are not installed. Change the usr, home and config-location as needed. -->
 
 <components>
+<!--
 	<component name="hive">
-		<user>hadoop</user>
-		<home>/apache/hive/</home>
-		<config-location>/apache/hive/conf/</config-location>
+		<user>hdfs</user>
+		<home>/usr/lib/hive</home>
+		<config-location>/etc/hive/conf</config-location>
 	</component>
-
+-->
 	<component name="mapreduce">
-		<user>hadoop</user>
-		<home>/home/hadoop/</home>
-		<config-location>/apache/hadoop/conf/</config-location>
+		<user>hdfs</user>
+		<home>/usr/lib/hadoop-0.20</home>
+		<config-location>/etc/hadoop-0.20/conf/</config-location>
 	</component>
 
 	<component name="hdfs">
-		<user>hadoop</user>
-		<home>/home/hadoop/</home>
-		<config-location>/apache/hadoop/conf/</config-location>
+		<user>hdfs</user>
+		<home>/usr/lib/hadoop-0.20</home>
+		<config-location>/etc/hadoop-0.20/conf/</config-location>
 	</component>
-	
+<!--	
 	<component name="hbase">
 		<user>hadoop</user>
 		<home>/apache/hbase/</home>
@@ -33,7 +34,7 @@
 		<home>/home/hadoop/</home>
 		<config-location>/apache/zookeeper/conf/</config-location>
 	</component>
-	
+-->
 	<!-- 
 	<component name="pig">
 		<user>pig</user>
@@ -65,5 +66,10 @@
 		<config-location>/etc/hive/conf/</config-location>
 	</component>
 	-->
+  	<component name="sqoop">
+                <user>sqoop</user>
+                <home>/usr/lib/sqoop</home>
+                <config-location>/etc/sqoop/conf/</config-location>
+        </component>
 </components>
 
