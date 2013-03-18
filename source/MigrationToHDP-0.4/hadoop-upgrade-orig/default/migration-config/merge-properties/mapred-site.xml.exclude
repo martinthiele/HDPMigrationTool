@@ -1,6 +1,0 @@
-hadoop.job.history.location
-hadoop.job.history.user.location
-mapred.jobtracker.job.history.block.size
-mapred.jobtracker.taskScheduler 
-mapred.fairscheduler.allocation.file
-mapred.fairscheduler.assignmultiple

@@ -1,4 +1,0 @@
-16:24:40,675        DEBUG FileComparer::compareColumns:271 - All lines in both files match specified columns.
-16:24:40,676         INFO HDFSLsrComparision::compareHDFSFileLists:32 - Great News! HDFS lsr reports validation is SUCCESSFUL
-16:25:25,892         INFO FsckResult::equals:175 - GREAT NEWS! : FSCK Reports match
-16:25:25,893         INFO HDFSFsckReportComparison::compareHDFSFSCKReport:31 - Great News! HDFS fsck reports validation is SUCCESSFUL

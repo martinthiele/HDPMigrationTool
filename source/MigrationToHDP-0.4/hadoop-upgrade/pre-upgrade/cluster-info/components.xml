@@ -5,36 +5,35 @@
 	that are not installed. Change the usr, home and config-location as needed. -->
 
 <components>
-<!--
 	<component name="hive">
-		<user>hdfs</user>
-		<home>/usr/lib/hive</home>
-		<config-location>/etc/hive/conf</config-location>
+		<user>hive</user>
+		<home>/home/hadoop/cdh3u3/hive-0.7.1-cdh3u3</home>
+		<config-location>/home/hadoop/cdh3u3/hive-0.7.1-cdh3u3/conf/</config-location>
 	</component>
--->
+
 	<component name="mapreduce">
-		<user>hdfs</user>
-		<home>/usr/lib/hadoop-0.20</home>
-		<config-location>/etc/hadoop-0.20/conf/</config-location>
+		<user>mapred</user>
+		<home>/home/hadoop/cdh3u3/hadoop-0.20.2-cdh3u3</home>
+		<config-location>/home/hadoop/cdh3u3/hadoop-0.20.2-cdh3u3/conf/</config-location>
 	</component>
 
 	<component name="hdfs">
 		<user>hdfs</user>
-		<home>/usr/lib/hadoop-0.20</home>
-		<config-location>/etc/hadoop-0.20/conf/</config-location>
+		<home>/home/hadoop/cdh3u3/hadoop-0.20.2-cdh3u3</home>
+		<config-location>/home/hadoop/cdh3u3/hadoop-0.20.2-cdh3u3/conf/</config-location>
 	</component>
-<!--	
+	
 	<component name="hbase">
-		<user>hadoop</user>
-		<home>/apache/hbase/</home>
-		<config-location>/apache/hbase/conf/</config-location>
+		<user>hbase</user>
+		<home>/home/hadoop/cdh3u3/hbase-0.90.4-cdh3u3</home>
+		<config-location>/home/hadoop/cdh3u3/hbase-0.90.4-cdh3u3/conf/</config-location>
 	</component>
 		<component name="zookeeper">
-		<user>hadoop</user>
-		<home>/home/hadoop/</home>
-		<config-location>/apache/zookeeper/conf/</config-location>
+		<user>zookeeper</user>
+		<home>/home/hadoop/cdh3u3/zookeeper-3.3.4-cdh3u3</home>
+		<config-location>/home/hadoop/cdh3u3/zookeeper-3.3.4-cdh3u3/conf/</config-location>
 	</component>
--->
+	
 	<!-- 
 	<component name="pig">
 		<user>pig</user>
@@ -66,10 +65,5 @@
 		<config-location>/etc/hive/conf/</config-location>
 	</component>
 	-->
-  	<component name="sqoop">
-                <user>sqoop</user>
-                <home>/usr/lib/sqoop</home>
-                <config-location>/etc/sqoop/conf/</config-location>
-        </component>
 </components>
 

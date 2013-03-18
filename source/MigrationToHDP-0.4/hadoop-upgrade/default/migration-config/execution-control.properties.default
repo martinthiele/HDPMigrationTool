@@ -2,6 +2,7 @@
 common.backup.config.files=true
 common.backup.installation.dir=true
 common.prompt.while.running.commands.on.multiple.nodes=false
+common.parallel.execution.buckets=1,5,25,50,100
 
 ## HDFS settings
 hdfs.capture.lsr.report=true

@@ -1,7 +1,0 @@
-javax.jdo.option.ConnectionURL
-javax.jdo.option.ConnectionDriverName
-javax.jdo.option.ConnectionUserName
-javax.jdo.option.ConnectionPassword
-hive.stats.dbconnectionstring
-hive.stats.jdbcdriver
-hive.metastore.warehouse.dir
