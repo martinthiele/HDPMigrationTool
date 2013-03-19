@@ -160,7 +160,8 @@ public class UpgradeProcessor {
 		try {
 			props.load(new FileInputStream(propertiesFile));
 			log.debug("Execution properties are: " + props);
-			System.getProperties().putAll(props);
+			props.putAll(System.getProperties());
+			System.setProperties(props);
 		} catch (Exception e) {
 			log.error("Unable to read properties file " + propertiesFile + ".  All default properties will be used.", e);
 		}
