@@ -153,10 +153,17 @@ public class HDFS extends Component {
 							Config.getLocalServiceConfigDir(upgradeStage, getName()).replaceAll(Constants.HOST_NAME_PLACEHOLDER,
 									snnService.getHostsList().get(0))
 									+ "/core-site.xml", "fs.checkpoint.dir"), ",");
-			mountNumber = 1;
 			if (secondaryNameNodeDataLocations == null) {
-				log.error("No fs.checkpoint.dir found in core xml. It will not be backed up automatically. Please make sure check point directory is backed up");
+				secondaryNameNodeDataLocations = StringUtils.split(
+						XMLUtil.getConfigParamValue(
+								Config.getLocalServiceConfigDir(upgradeStage, getName()).replaceAll(Constants.HOST_NAME_PLACEHOLDER,
+										snnService.getHostsList().get(0))
+										+ "/hdfs-site.xml", "fs.checkpoint.dir"), ",");
+			}
+			if (secondaryNameNodeDataLocations == null) {
+				log.error("No fs.checkpoint.dir found in core-site xml or hdfs-site xml. It will not be backed up automatically. Please make sure check point directory is backed up");
 			} else {
+				mountNumber = 1;
 				for (String secondaryNameNodeDataLocation : secondaryNameNodeDataLocations) {
 					for (String hostName : snnService.getHostsList()) {
 						String tarName = getName() + "-checkpoint-image-mount" + mountNumber + "-" + upgradeStage + ".tgz";

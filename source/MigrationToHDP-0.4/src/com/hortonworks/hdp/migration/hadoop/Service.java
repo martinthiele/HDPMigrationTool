@@ -132,7 +132,7 @@ public abstract class Service {
 				eGrepPattern += "[" + pattern.charAt(0) + "]" + pattern.substring(1) + "|";
 			}
 			eGrepPattern = eGrepPattern.substring(0, (eGrepPattern.length() - 1));
-			String command = "ps aux | egrep '" + eGrepPattern + "' | awk '{print $2}' |  xargs -r kill";
+			String command = "ps aux | egrep '" + eGrepPattern + "' | awk '{print \\$2}' |  xargs -r kill";
 			return command;
 		} else {
 			return null;

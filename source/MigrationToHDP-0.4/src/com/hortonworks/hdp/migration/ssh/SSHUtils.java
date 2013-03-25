@@ -183,7 +183,7 @@ public class SSHUtils {
 		}
 		if (SSHUtils.confirmAction("Do you want to use private key based authentication (assumes passwordless ssh is set up for user " + userId
 				+ ". If not, you will need to provide the password for " + userId + ") ?")) {
-			privateKeyFile = readUserInput("Specify fully qualified path of private key file for root", null, false, null);
+			privateKeyFile = readUserInput("Specify fully qualified path of private key file for root", null, false, "/root/.ssh/id_rsa");
 		} else {
 			password = readPassword("Enter password for " + userId);
 		}

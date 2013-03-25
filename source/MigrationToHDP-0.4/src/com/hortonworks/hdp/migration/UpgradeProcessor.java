@@ -237,7 +237,15 @@ public class UpgradeProcessor {
 	public void validateAndInitialize(String upgradeStage, boolean cleanup) throws Exception {
 		log.info("####################################################################################");
 		log.info("###     BEGINING THE " + StringUtils.upperCase(upgradeStage) + " PROCESS AT " + new Date() + "     ###");
-		log.info("####################################################################################");
+		log.info("####################################################################################\n\n");
+		
+		
+		log.debug("Messages in this font and font color are debug messages") ;
+		log.info("Messages in this font and font color are informational messages") ;
+		log.warn("Messages in this font and font color are warnings") ;
+		log.error("Messages in this font and font color are error messages") ;
+		SSHUtils.readUserInput("Messages in this font and font color are questions expecting user input.\n\nPress enter when ready.\n\n", null, true, null ) ;
+		
 
 		readMigrationProperties();
 

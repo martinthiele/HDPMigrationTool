@@ -201,7 +201,11 @@ public class Hive extends Component {
 		super.performPreUpgradeActivities();
 		captureStats(Constants.UPGRADE_STAGE_PRE);
 		stopAll();
-		log.info("\n\n*** " + getName() + " is ready to upgrade. PLEASE BACK UP THE METASTORE DATABASE AND EXECUTE UPGRADE SCRIPTS ***\n\n");
+		log.info("\n\n*** " + getName() + " is ready to upgrade. PLEASE BACK UP THE METASTORE DATABASE AND EXECUTE METASTORE UPGRADE SCRIPTS ***\n\n");
+		
+		log.info("For mysql run this command as dba user : mysqldump <<dbname>>") ;
+		log.info("For PostgreSql run this command as dba user : pg_dump <<dbname>> > <<outfile name>>" );
+		log.info("For derby copy the database file: cp <<database file>> <<backup file name>>" );
 
 	}
 
